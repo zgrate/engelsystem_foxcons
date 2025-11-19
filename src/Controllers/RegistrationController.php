@@ -16,6 +16,7 @@ use Engelsystem\Http\Response;
 use Engelsystem\Models\AngelType;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Illuminate\Validation\ValidationException;
 
 class RegistrationController extends BaseController
 {
@@ -43,7 +44,7 @@ class RegistrationController extends BaseController
     }
 
     public function save(Request $request): Response
-    {
+    {     
         if ($this->determineRegistrationDisabled()) {
             return $this->notifySignUpDisabledAndRedirectToHome();
         }
@@ -51,54 +52,36 @@ class RegistrationController extends BaseController
         $rawData = $request->getParsedBody();
         try {
             $user = $this->userFactory->createFromData($rawData);
-        } catch (\Throwable $e) {
-            // Log and show user a friendly error message
-            $this->log->error('Registration error: {message}', ['message' => $e->getMessage(), 'exception' => $e]);
-            // Also write a fallback file log so we have a trace even if DB logging isn't working
-
-            // Preserve submitted form data so the user doesn't lose their input
+        } 
+        catch (\ValidationException $exception) {
+            $this->addNotification(strval($exception), NotificationType::ERROR);
+            foreach ($exception->getValidator()->getErrors()->all() as $error) {
+                $this->addNotification($error, NotificationType::ERROR);
+            }
             $this->session->set('form-data-register-submit', '1');
             $this->addNotification('registration.error', NotificationType::ERROR);
-
             return $this->redirect->to('/register')->withInput($rawData);
         }
+
+        // catch (\Throwable $e) {
+            
+        //     $this->addNotification(strval( $e), NotificationType::ERROR);
+        //     // Log and show user a friendly error message
+        //     $this->log->error('Registration error: {message}', ['message' => $e->getMessage(), 'exception' => $e]);
+        //     // Also write a fallback file log so we have a trace even if DB logging isn't working
+
+        //     // Preserve submitted form data so the user doesn't lose their input
+        //     $this->session->set('form-data-register-submit', '1');
+        //     $this->addNotification('registration.error', NotificationType::ERROR);
+        //     return $this->redirect->to('/register')->withInput($rawData);
+        // } 
+        // Check for validation exceptions and add notifications
+
 
         if (!$this->auth->user()) {
             $this->addNotification('registration.successful');
         } else {
             $this->addNotification('registration.successful.supporter');
-        }
-
-        // If configured, allowlist only users in certain groups. When 'auth.allowed_group_names'
-        // is non-empty, newly created users who do not belong to any of the allowed groups
-        // will be removed and registration rejected.
-        $allowed = $this->config->get('auth')['allowed_group_names'] ?? [];
-        if (!empty($allowed) && is_array($allowed)) {
-            $allowedLower = array_map('strtolower', $allowed);
-            $userGroupNames = $user->groups()->pluck('name')->toArray();
-
-            $isMemberOfAllowed = false;
-            foreach ($userGroupNames as $gname) {
-                if (in_array(strtolower((string) $gname), $allowedLower, true)) {
-                    $isMemberOfAllowed = true;
-                    break;
-                }
-            }
-
-            if (!$isMemberOfAllowed) {
-                // Remove the created user to avoid leaving disallowed accounts in the DB
-                try {
-                    $user->delete();
-                } catch (\Throwable $t) {
-                    $this->log->warning('Failed to delete not-allowed user after registration: {message}', ['message' => $t->getMessage()]);
-                }
-
-                // Preserve submitted form data so the user doesn't lose their input
-                $this->session->set('form-data-register-submit', '1');
-                $this->addNotification('registration.not_allowed_by_power', NotificationType::ERROR);
-
-                return $this->redirect->to('/register')->withInput($rawData);
-            }
         }
 
         if ($this->config->get('welcome_msg')) {

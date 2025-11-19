@@ -94,6 +94,13 @@ class AuthController extends BaseController
             return $this->showLogin();
         }
 
+        $profilePower = $profile['power'] ?? null;
+        if ($profilePower !== null) {
+            if (!$this->isPowerAllowed((string) $profilePower)) {
+                $this->addNotification('auth.not_allowed_by_power', NotificationType::ERROR);
+                return $this->showLogin();
+            }
+        }
         // Try to find an existing OAuth link
         $identifier = (string) $profile['id'];
         $provider = 'foxcons';
@@ -149,7 +156,8 @@ class AuthController extends BaseController
 
         // No local user: follow existing OAuth flow - set session data and redirect to registration
         // so required fields are collected via the normal registration process.
-    $this->session->set('form-data-username', $profile['displayName'] ?? ($profile['firstName'] ?? $login));
+    $username = preg_replace('/[^a-zA-Z0-9.-_]/', '', substr($profile['displayName'] ?? ($profile['firstName'] ?? $login), 0, 24));
+    $this->session->set('form-data-username', $username);
     $this->session->set('form-data-email', $login);
     $this->session->set('form-data-firstname', $profile['firstName'] ?? null);
     $this->session->set('form-data-lastname', $profile['lastName'] ?? null);

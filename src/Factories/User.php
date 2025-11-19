@@ -365,7 +365,7 @@ class User
     private function validate(array $rawData, array $rules): array
     {
         $isValid = $this->validator->validate($rawData, $rules);
-
+        
         if (!$isValid) {
             throw new ValidationException($this->validator);
         }
