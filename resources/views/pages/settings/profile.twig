@@ -106,6 +106,16 @@
                     }) }}
                 {% endif %}
             </div>
+            {% if config('enable_telegram') %}
+                <div class="col-md-6">
+                    {{ f.input('telegram', __('settings.profile.telegram'), {
+                        'value': userdata.contact.telegram,
+                        'max_length': 64,
+                        'required': isTelegramRequired,
+                        'required_icon': isTelegramRequired,
+                    }) }}
+                </div>
+            {% endif %}
         </div>
 
         <div class="row g-4">

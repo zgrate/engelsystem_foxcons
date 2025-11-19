@@ -21,7 +21,7 @@ return [
     'maintenance'             => (bool) env('MAINTENANCE', false),
 
     // Application name (not the event name)
-    'app_name'                => env('APP_NAME', 'Engelsystem'),
+    'app_name'                => env('APP_NAME', 'System Załogi'),
 
     // Set to development to enable debugging messages
     'environment'             => env('ENVIRONMENT', 'production'),
@@ -148,6 +148,12 @@ return [
             ],
         ],
         */
+    ],
+
+    // Foxcons external auth API (email + password)
+    'foxcons' => [
+        // Base URL for foxcons API (no trailing slash)
+        'url' => env('FOXCONS_URL', 'https://dev.foxcons.pl/app'),
     ],
 
     // Default theme, 1 = theme1.scss etc.
@@ -284,7 +290,11 @@ return [
         'tshirt_size'        => (bool) env('TSHIRT_SIZE_REQUIRED', true),
         'mobile'             => (bool) env('MOBILE_REQUIRED', false),
         'dect'               => (bool) env('DECT_REQUIRED', false),
+        'telegram'           => (bool) env('TELEGRAM_REQUIRED', true),
     ],
+
+    // Toggle Telegram handle collection and public display
+    'enable_telegram' => (bool) env('ENABLE_TELEGRAM', true),
 
     // Only arrived users can sign up for shifts
     'signup_requires_arrival' => (bool) env('SIGNUP_REQUIRES_ARRIVAL', false),
@@ -324,8 +334,16 @@ return [
     // This is useful when using oauth, disabling it also disables normal registration without oauth
     'enable_password'         => (bool) env('ENABLE_PASSWORD', true),
 
+    // Authentication related settings
+    'auth' => [
+        // Allowed group names (case-insensitive). When non-empty, only users who are members
+        // of any of these groups are allowed to login or register. Example: ['Organizer', 'Staff']
+        // When empty, all groups are allowed (backwards-compatible default).
+        'allowed_group_names' => ["helper", "orga-team", "admin"],
+    ],
+
     // Whether the DECT field should be enabled
-    'enable_dect'             => (bool) env('ENABLE_DECT', true),
+    'enable_dect'             => (bool) env('ENABLE_DECT', false),
 
     // Whether the mobile number will be shown to other users
     'enable_mobile_show'      => (bool) env('ENABLE_MOBILE_SHOW', false),
@@ -406,10 +424,11 @@ return [
     'locales'                 => [
         'de_DE' => 'Deutsch',
         'en_US' => 'English',
+        'pl_PL' => 'Polski',
     ],
 
     // The default locale to use
-    'default_locale'          => env('DEFAULT_LOCALE', 'en_US'),
+    'default_locale'          => env('DEFAULT_LOCALE', 'pl_PL'),
 
     // Available T-shirt sizes
     // To disable a t-shirt size in config.php, you can set its value to null
@@ -484,7 +503,7 @@ return [
     'credits'                 => [
         'Contribution' => 'Please visit [engelsystem/engelsystem](https://github.com/engelsystem/engelsystem) if '
             . 'you want to contribute, have found any [bugs](https://github.com/engelsystem/engelsystem/issues) '
-            . 'or need help.',
+            . 'or need help. System modified by @zgrate',
     ],
 
     // var dump server

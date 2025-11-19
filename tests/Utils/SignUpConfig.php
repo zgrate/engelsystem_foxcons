@@ -18,6 +18,7 @@ final class SignUpConfig
             'tshirt_size' => true,
             'mobile'      => false,
             'dect'        => false,
+            'telegram'    => false,
         ];
         $config->set('registration_enabled', true);
         $config->set('enable_password', true);
@@ -48,6 +49,7 @@ final class SignUpConfig
             'tshirt_size' => true,
             'mobile'      => false,
             'dect'        => false,
+            'telegram'    => false,
         ];
         $config->set('registration_enabled', true);
         $config->set('enable_password', true);

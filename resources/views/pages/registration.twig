@@ -46,6 +46,7 @@
                             'required': true,
                             'required_icon': true,
                             'value': f.formData('username', ''),
+                            'readonly': isOauthRegistration,
                         }
                     ) }}
                 </div>
@@ -95,6 +96,7 @@
                             'required': true,
                             'required_icon': true,
                             'value': f.formData('email', ''),
+                            'readonly': isOauthRegistration,
                         }
                     ) }}
                 </div>
@@ -111,7 +113,7 @@
                                 ),
                                 {
                                     'class': '',
-                                    'checked': f.formData('email_system', false),
+                                    'checked': f.formData('email_system', isOauthRegistration),
                                     'info': __('registration.email_system.info'),
                                 },
                             ) }}
@@ -123,7 +125,7 @@
                                 __('settings.profile.email_by_human_allowed'),
                                 {
                                     'class': '',
-                                    'checked': f.formData('email_by_human_allowed', false),
+                                    'checked': f.formData('email_by_human_allowed', isOauthRegistration),
                                 },
                             ) }}
                         </li>
@@ -253,6 +255,21 @@
                         ) }}
                     {% endif %}
                 </div>
+
+                {% if config('enable_telegram') %}
+                    <div class="col-md-6">
+                        {{ f.input(
+                            'telegram',
+                            __('settings.profile.telegram'),
+                            {
+                                'max_length': 64,
+                                'required': isTelegramRequired,
+                                'required_icon': isTelegramRequired,
+                                'value': f.formData('telegram', ''),
+                            }
+                        ) }}
+                    </div>
+                {% endif %}
 
                 {% if isDECTEnabled %}
                     <div class="col-md-6">

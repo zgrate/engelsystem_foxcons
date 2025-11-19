@@ -758,6 +758,14 @@ function User_view(
                             )
                             : ''
                         : '',
+                    config('enable_telegram') && $user_source->contact->telegram ?
+                        heading(
+                            icon('telegram')
+                            . ' <a href="https://t.me/' . htmlspecialchars(ltrim($user_source->contact->telegram, '@')) . '" target="_blank" rel="noopener">'
+                            . htmlspecialchars($user_source->contact->telegram)
+                            . '</a>'
+                        )
+                        : '',
                     $auth->can('user_messages') ?
                         heading(
                             '<a href="' . url('/messages/' . $user_source->id) . '">'
@@ -1166,4 +1174,16 @@ function render_night_shift_hint(mixed $nightShiftsConfig): string
             $nightShiftsConfig['multiplier'],
         ])
         . '"></span>';
+}
+
+
+function render_user_telegram_hint()
+{
+    $user = auth()->user();
+    if (config('required_user_fields')['telegram'] && config('enable_telegram') && !$user->contact->telegram) {
+        $text = __('telegram.required.hint');
+        return render_profile_link($text);
+    }
+
+    return null;
 }

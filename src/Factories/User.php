@@ -90,6 +90,7 @@ class User
             'email_goodie' => 'optional|checked',
             // Using length here, because min/max would validate dect/mobile as numbers.
             'mobile' => $this->isRequired('mobile') . '|length:0:40',
+            'telegram' => $this->isRequired('telegram') . '|length:0:64',
         ];
 
         $isPasswordEnabled = $this->determineIsPasswordEnabled();
@@ -233,6 +234,7 @@ class User
         $contact = new Contact([
             'dect'   => $data['dect'] ?? null,
             'mobile' => $data['mobile'],
+            'telegram' => $data['telegram'] ?? null,
         ]);
         $contact->user()
             ->associate($user)
@@ -302,8 +304,26 @@ class User
             $this->session->remove('oauth2_expires_at');
         }
 
-        $defaultGroup = Group::find($this->authenticator->getDefaultRole());
-        $user->groups()->attach($defaultGroup);
+        // If an OAuth provider supplied a "power" level (e.g. from Foxcons), try to map it
+        // to an existing Group by name (case-insensitive). If found, attach that group.
+        // Otherwise fall back to the default role.
+        $oauthPower = $this->session->get('oauth2_power') ?? $this->session->get('form-data-power');
+        $attached = false;
+        if (!empty($oauthPower)) {
+            $powerName = (string) $oauthPower;
+            $group = Group::whereRaw('LOWER(name) = ?', [strtolower($powerName)])->first();
+            if ($group) {
+                $user->groups()->attach($group);
+                $attached = true;
+            }
+        }
+
+        if (!$attached) {
+            $defaultGroup = Group::find($this->authenticator->getDefaultRole());
+            if ($defaultGroup) {
+                $user->groups()->attach($defaultGroup);
+            }
+        }
 
         auth()->resetApiKey($user);
         if ($this->determineIsPasswordEnabled() && array_key_exists('password', $data)) {

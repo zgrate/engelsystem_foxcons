@@ -8,11 +8,13 @@ use Engelsystem\Config\Config;
 use Engelsystem\Config\GoodieType;
 use Engelsystem\Events\Listener\OAuth2;
 use Engelsystem\Factories\User;
+use Carbon\Carbon;
 use Engelsystem\Helpers\Authenticator;
 use Engelsystem\Http\Redirector;
 use Engelsystem\Http\Request;
 use Engelsystem\Http\Response;
 use Engelsystem\Models\AngelType;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class RegistrationController extends BaseController
@@ -26,7 +28,8 @@ class RegistrationController extends BaseController
         private SessionInterface $session,
         private Authenticator $auth,
         private OAuth2 $oAuth,
-        private User $userFactory
+        private User $userFactory,
+        protected LoggerInterface $log,
     ) {
     }
 
@@ -46,12 +49,56 @@ class RegistrationController extends BaseController
         }
 
         $rawData = $request->getParsedBody();
-        $user = $this->userFactory->createFromData($rawData);
+        try {
+            $user = $this->userFactory->createFromData($rawData);
+        } catch (\Throwable $e) {
+            // Log and show user a friendly error message
+            $this->log->error('Registration error: {message}', ['message' => $e->getMessage(), 'exception' => $e]);
+            // Also write a fallback file log so we have a trace even if DB logging isn't working
+
+            // Preserve submitted form data so the user doesn't lose their input
+            $this->session->set('form-data-register-submit', '1');
+            $this->addNotification('registration.error', NotificationType::ERROR);
+
+            return $this->redirect->to('/register')->withInput($rawData);
+        }
 
         if (!$this->auth->user()) {
             $this->addNotification('registration.successful');
         } else {
             $this->addNotification('registration.successful.supporter');
+        }
+
+        // If configured, allowlist only users in certain groups. When 'auth.allowed_group_names'
+        // is non-empty, newly created users who do not belong to any of the allowed groups
+        // will be removed and registration rejected.
+        $allowed = $this->config->get('auth')['allowed_group_names'] ?? [];
+        if (!empty($allowed) && is_array($allowed)) {
+            $allowedLower = array_map('strtolower', $allowed);
+            $userGroupNames = $user->groups()->pluck('name')->toArray();
+
+            $isMemberOfAllowed = false;
+            foreach ($userGroupNames as $gname) {
+                if (in_array(strtolower((string) $gname), $allowedLower, true)) {
+                    $isMemberOfAllowed = true;
+                    break;
+                }
+            }
+
+            if (!$isMemberOfAllowed) {
+                // Remove the created user to avoid leaving disallowed accounts in the DB
+                try {
+                    $user->delete();
+                } catch (\Throwable $t) {
+                    $this->log->warning('Failed to delete not-allowed user after registration: {message}', ['message' => $t->getMessage()]);
+                }
+
+                // Preserve submitted form data so the user doesn't lose their input
+                $this->session->set('form-data-register-submit', '1');
+                $this->addNotification('registration.not_allowed_by_power', NotificationType::ERROR);
+
+                return $this->redirect->to('/register')->withInput($rawData);
+            }
         }
 
         if ($this->config->get('welcome_msg')) {
@@ -60,9 +107,35 @@ class RegistrationController extends BaseController
         }
 
         if ($user->oauth?->count() > 0) {
-            // User has OAuth configured. Log in directly.
+            // User has OAuth configured. If the provider is a configured OAuth provider
+            // we redirect to the provider flow, otherwise (e.g. Foxcons) we log the
+            // user in directly to avoid attempting to initiate an unknown OAuth flow.
             $provider = $user->oauth->first();
-            return $this->redirect->to('/oauth/' . $provider->provider);
+            $providerName = $provider->provider;
+
+            $oauthConfig = $this->config->get('oauth')[$providerName] ?? null;
+            if ($oauthConfig) {
+                return $this->redirect->to('/oauth/' . $providerName);
+            }
+
+            // Non-standard provider (not present in oauth config) - perform direct login.
+            $previousPage = $this->session->get('previous_page');
+
+            // Invalidate any old session and set the new user id and locale.
+            $this->session->invalidate();
+            $this->session->set('user_id', $user->id);
+            $this->session->set('locale', $user->settings->language);
+
+            $user->last_login_at = new Carbon();
+            $user->save(['touch' => false]);
+
+            try {
+                $this->session->save();
+            } catch (\Throwable) {
+                // ignore
+            }
+
+            return $this->redirect->to($previousPage ?: $this->config->get('home_site'));
         }
 
         if ($this->auth->user()) {
@@ -114,6 +187,9 @@ class RegistrationController extends BaseController
                 'isTShirtSizeRequired' => $requiredFields['tshirt_size'],
                 'isMobileRequired' => $requiredFields['mobile'],
                 'isDectRequired' => $requiredFields['dect'],
+                'isTelegramRequired' => $requiredFields['telegram'],
+                // Whether this registration originates from an OAuth provider redirect
+                'isOauthRegistration' => $this->session->has('oauth2_connect_provider'),
             ],
         );
     }
@@ -189,13 +265,16 @@ class RegistrationController extends BaseController
         $isOAuth = $this->session->get('oauth2_connect_provider');
         $isPasswordEnabled = $this->userFactory->determineIsPasswordEnabled();
 
-        return !auth()->can('register') // No registration permission
-            // Not authenticated and
-            // Registration disabled
+        // Disable registration when:
+        // - the current actor doesn't have register permissions (supporter/admin flows only), OR
+        // - the actor is anonymous and the registration is not originating from an OAuth/SSO flow
+        //   (we only allow OAuth-originated registrations, e.g. via Foxcons), OR
+        // - password-based registration is disabled and there is no OAuth flow
+        return !auth()->can('register')
             || (
                 !$authUser
-                && !$this->config->get('registration_enabled')
-                && !$this->session->get('oauth2_allow_registration')
+                // Only allow anonymous registration when originating from an OAuth provider (Foxcons)
+                && !$isOAuth
             )
             // Password disabled and not oauth
             || (!$authUser && !$isPasswordEnabled && !$isOAuth);

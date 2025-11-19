@@ -25,6 +25,7 @@ class Contact extends HasUserModel
         'dect'   => null,
         'mobile' => null,
         'email'  => null,
+        'telegram' => null,
     ];
 
     /** @var string The table associated with the model */
@@ -40,5 +41,6 @@ class Contact extends HasUserModel
         'dect',
         'email',
         'mobile',
+        'telegram',
     ];
 }

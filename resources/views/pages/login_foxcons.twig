@@ -1,0 +1,61 @@
+{% extends "layouts/app.twig" %}
+{% import 'macros/base.twig' as m %}
+
+{% block title %}{{ __('oauth.login') }} (Foxcons){% endblock %}
+
+{% block content %}
+    <div class="col-md-12">
+        <div class="row mb-5">
+            <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+                <div class="card {{ m.type_bg_class() }} registration">
+                    <div class="card-body">
+                        {% include 'layouts/parts/messages.twig' %}
+
+                        <h4 class="text-center">{{ __('oauth.login') }} (Foxcons)</h4>
+
+                        <form action="{{ url('/login/foxcons') }}" method="post">
+                            {{ csrf() }}
+
+                            <div class="mb-3">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text {{ m.type_text_class() }}">
+                                        {{ m.angel }}
+                                    </span>
+                                    <label for="foxcons_login" class="visually-hidden">{{ __('general.nick') }}</label>
+                                    <input
+                                        class="form-control"
+                                        id="foxcons_login"
+                                        type="text"
+                                        name="login"
+                                        value=""
+                                        placeholder="{{ __('general.nick') }}" autofocus>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text {{ m.type_text_class() }}">
+                                        <i class="bi bi-key"></i>
+                                    </span>
+                                    <label for="foxcons_password" class="visually-hidden">{{ __('settings.password') }}</label>
+                                    <input
+                                        class="form-control" id="foxcons_password" type="password"
+                                        name="password" value="" placeholder="{{ __('settings.password') }}" autocomplete="current-password"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="mb-3 text-center">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">
+                                    {{ __('oauth.login') }}
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -16,6 +16,9 @@ $route->get('/health', 'HealthController@index');
 // Authentication
 $route->get('/login', 'AuthController@login');
 $route->post('/login', 'AuthController@postLogin');
+// External Foxcons login (email + password against Foxcons API)
+$route->post('/login/foxcons', 'AuthController@postFoxconsLogin');
+$route->get('/login/foxcons', 'AuthController@loginFoxcons');
 $route->get('/logout', 'AuthController@logout');
 
 // OAuth

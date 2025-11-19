@@ -56,6 +56,7 @@ class SettingsController extends BaseController
                 'isTShirtSizeRequired' => $requiredFields['tshirt_size'],
                 'isMobileRequired' => $requiredFields['mobile'],
                 'isDectRequired' => $requiredFields['dect'],
+                'isTelegramRequired' => $requiredFields['telegram'],
             ]
         );
     }
@@ -464,6 +465,7 @@ class SettingsController extends BaseController
             'first_name' => $this->isRequired('firstname') . '|max:64',
             'last_name' => $this->isRequired('lastname') . '|max:64',
             'dect' => $this->isRequired('dect') . '|length:0:40',
+            'telegram' => $this->isRequired('telegram') . '|max:32',
             // dect/mobile can be purely numbers. "max" would have checked their values, not their character length.
             'mobile' => $this->isRequired('mobile') . '|length:0:40',
             'mobile_show' => 'optional|checked',

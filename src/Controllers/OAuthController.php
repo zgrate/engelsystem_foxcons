@@ -22,6 +22,7 @@ use League\OAuth2\Client\Provider\ResourceOwnerInterface as ResourceOwner;
 use League\OAuth2\Client\Token\AccessTokenInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Session\Session as Session;
+use Engelsystem\Controllers\NotificationType;
 
 class OAuthController extends BaseController
 {
@@ -87,7 +88,7 @@ class OAuthController extends BaseController
                 ]
             );
         } catch (IdentityProviderException $e) {
-            $this->handleOAuthError($e, $providerName);
+            return $this->handleOAuthError($e, $providerName);
         }
 
         // Load resource identifier
@@ -95,7 +96,7 @@ class OAuthController extends BaseController
         try {
             $resourceOwner = $provider->getResourceOwner($accessToken);
         } catch (IdentityProviderException $e) {
-            $this->handleOAuthError($e, $providerName);
+            return $this->handleOAuthError($e, $providerName);
         }
         $resourceId = $this->getId($providerName, $resourceOwner);
 
@@ -275,10 +276,9 @@ class OAuthController extends BaseController
     }
 
     /**
-     *
-     * @throws HttpNotFound
+     * Handle identity provider errors by logging and redirecting to the login page with a notification.
      */
-    protected function handleOAuthError(IdentityProviderException $e, string $providerName): void
+    protected function handleOAuthError(IdentityProviderException $e, string $providerName): Response
     {
         $response = $e->getResponseBody();
         $response = is_array($response) ? json_encode($response) : $response;
@@ -291,7 +291,10 @@ class OAuthController extends BaseController
             ]
         );
 
-        throw new HttpNotFound('oauth.provider-error');
+        // Set a user-visible notification and redirect to login instead of throwing a 404
+        $this->addNotification('oauth.provider-error', NotificationType::ERROR);
+
+        return $this->redirect->to('/login');
     }
 
     protected function redirectRegister(
@@ -301,6 +304,24 @@ class OAuthController extends BaseController
         array $config,
         Collection $userdata
     ): Response {
+        // Debug log oauth redirect/register attempt so we can trace registration failures
+        try {
+            $this->log->info('OAuth redirectRegister', [
+                'provider' => $providerName,
+                'identifier' => $providerUserIdentifier,
+                'config' => $config,
+                'userdata' => $userdata->toArray(),
+            ]);
+        } catch (\Throwable $e) {
+            // Swallow logging exceptions to not break flow
+            // Fallback: write a small debug file so admins can see what happened even if DB logging is broken
+            try {
+                $path = __DIR__ . '/../../storage/logs/oauth_debug.log';
+                $msg = sprintf("%s OAuth redirectRegister fallback log: %s\n", (new \DateTime())->format(DATE_ATOM), $e->getMessage());
+                file_put_contents($path, $msg, FILE_APPEND | LOCK_EX);
+            } catch (\Throwable) {
+            }
+        }
         $config = array_merge(
             [
                 'username'           => null,

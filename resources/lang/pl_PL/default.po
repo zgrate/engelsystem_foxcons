@@ -1,0 +1,2016 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Engelsystem 2.0\n"
+"POT-Creation-Date: 2017-12-29 19:01+0100\n"
+"PO-Revision-Date: 2019-06-04 23:41+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: \n"
+"Language: pl_PL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "auth.password.error"
+msgstr "Twoje hasło jest nieprawidłowe. Proszę spróbuj ponownie."
+
+msgid "form.submit"
+msgstr "Wyślij"
+
+msgid "form.send_notification"
+msgstr "Wyślij %d powiadomień"
+
+msgid "general.add"
+msgstr "Dodaj"
+
+msgid "general.login"
+msgstr "Zaloguj się"
+
+msgid "general.dect"
+msgstr "Kontakt"
+
+msgid "general.name"
+msgstr "Nazwa"
+
+msgid "general.shifts"
+msgstr "Zmiany"
+
+msgid "general.info"
+msgstr "Informacje"
+
+msgid "general.description"
+msgstr "Opis"
+
+msgid "page.403.title"
+msgstr "Zabronione"
+
+msgid "page.403.headline"
+msgstr "Nie masz uprawnień do dostępu do tej strony"
+
+msgid "page.403.login"
+msgstr "Proszę się zalogować."
+
+msgid "page.error.title"
+msgstr "Błąd %s"
+
+msgid "page.404.title"
+msgstr "Strona nie znaleziona"
+
+msgid "page.404.not_found"
+msgstr "Nie znaleziono snu"
+
+msgid "page.404.text"
+msgstr ""
+"Ta strona nie została znaleziona lub nie masz uprawnień do jej obejrzenia. "
+"Musisz się zalogować lub zarejestrować, aby uzyskać dostęp!"
+
+msgid "page.405.title"
+msgstr "405: Metoda niedozwolona"
+
+msgid "page.419.title"
+msgstr "Autoryzacja wygasła"
+
+msgid "page.419.text"
+msgstr "Podany token CSRF jest nieprawidłowy lub wygasł. Proszę spróbuj ponownie."
+
+msgid "credits.credit"
+msgstr ""
+"Oryginalny engelsystem został stworzony przez "
+"[cookie](https://github.com/cookieBerlin/engelsystem)"
+". Został następnie całkowicie przepisany i wzbogacony przez "
+"[msquare](https://notrademark.de)"
+" (konserwator) oraz "
+"[MyIgel](https://myigel.name)"
+"."
+
+msgid "credits.contributors"
+msgstr ""
+"Proszę zapoznać się z "
+"[listą współtwórców na GitHubie](https://github.com/engelsystem/engelsystem/graphs/contributors)"
+" dla pełnej listy."
+
+msgid "form.select_placeholder"
+msgstr "Proszę wybrać..."
+
+msgid "form.load_schedule"
+msgstr "Załaduj harmonogram"
+
+msgid "form.import"
+msgstr "Importuj"
+
+msgid "form.save"
+msgstr "Zapisz"
+
+msgid "form.edit"
+msgstr "Edytuj"
+
+msgid "form.preview"
+msgstr "Podgląd"
+
+msgid "form.view"
+msgstr "Zobacz"
+
+msgid "form.delete"
+msgstr "Usuń"
+
+msgid "form.delete_all"
+msgstr "Usuń wszystko"
+
+msgid "form.updated"
+msgstr "Zaktualizowano"
+
+msgid "form.cancel"
+msgstr "Anuluj"
+
+msgid "form.required"
+msgstr "Wymagane"
+
+msgid "form.markdown"
+msgstr "Możesz używać Markdown tutaj"
+
+msgid "form.user_select"
+msgstr "Wybierz użytkownika"
+
+msgid "form.tags"
+msgstr "Tagi"
+
+msgid "form.tags.info"
+msgstr "Lista tagów oddzielonych przecinkami"
+
+msgid "schedule.import"
+msgstr "Importuj harmonogram"
+
+msgid "schedule.edit.title"
+msgstr "Edytuj harmonogram"
+
+msgid "schedule.delete.title"
+msgstr "Usuń harmonogram z %u zmianami"
+
+msgid "schedule.import.title"
+msgstr "Importuj harmonogram"
+
+msgid "schedule.last_update"
+msgstr "Ostatnia aktualizacja: %s"
+
+msgid "schedule.import.text"
+msgstr "Importy tworzą lokalizacje oraz tworzą, aktualizują i usuwają zmiany zgodnie z eksportem schedule.xml."
+
+msgid "schedule.import.load.title"
+msgstr "Import harmonogramu: Podgląd"
+
+msgid "schedule.import.load.info"
+msgstr "Import \"%s\" (wersja \"%s\")"
+
+msgid "schedule.name"
+msgstr "Nazwa harmonogramu"
+
+msgid "schedule.url"
+msgstr "URL harmonogramu (schedule.xml)"
+
+msgid "schedule.shift-type"
+msgstr "Typ zmiany"
+
+msgid "schedule.needed-from-shift-type"
+msgstr "Załaduj typy wolontariuszy z typu zmiany (inaczej z lokalizacji)"
+
+msgid "schedule.minutes-before"
+msgstr "Dodaj minuty przed rozpoczęciem rozmowy"
+
+msgid "schedule.minutes-after"
+msgstr "Dodaj minuty po zakończeniu rozmowy"
+
+msgid "schedule.for_locations"
+msgstr "Dla lokalizacji"
+
+msgid "schedule.import.request_error"
+msgstr "Nie można załadować harmonogramu."
+
+msgid "schedule.import.locations.add"
+msgstr "Lokalizacje do utworzenia"
+
+msgid "schedule.import.shifts.add"
+msgstr "Zmiany do utworzenia"
+
+msgid "schedule.import.shifts.update"
+msgstr "Zmiany do zaktualizowania"
+
+msgid "schedule.import.shifts.delete"
+msgstr "Zmiany do usunięcia"
+
+msgid "schedule.import.shift.dates"
+msgstr "Czasy"
+
+msgid "schedule.import.shift.type"
+msgstr "Typ"
+
+msgid "title.title"
+msgstr "Tytuł"
+
+msgid "schedule.import.shift.location"
+msgstr "Lokalizacja"
+
+msgid "news.title"
+msgstr "Aktualności"
+
+msgid "news.title.meetings"
+msgstr "Spotkania"
+
+msgid "news.add"
+msgstr "+"
+
+msgid "news.is_meeting"
+msgstr "[Spotkanie]"
+
+msgid "news.read_more"
+msgstr "Czytaj dalej"
+
+msgid "news.updated"
+msgstr "Zaktualizowano"
+
+msgid "news.comments"
+msgstr "Komentarze"
+
+msgid "news.comments.new"
+msgstr "Nowy komentarz"
+
+msgid "news.comments.message"
+msgstr "Wiadomość"
+
+msgid "news.edit.edit"
+msgstr "Edytuj aktualności"
+
+msgid "news.edit.add"
+msgstr "Dodaj aktualność"
+
+msgid "news.edit.subject"
+msgstr "Temat"
+
+msgid "news.edit.is_meeting"
+msgstr "Spotkanie"
+
+msgid "news.edit.is_highlighted"
+msgstr "Wyróżnione"
+
+msgid "news.edit.is_pinned"
+msgstr "Przypnij na górze"
+
+msgid "news.edit.message"
+msgstr "Wiadomość"
+
+msgid "news.edit.hint"
+msgstr "Możesz używać Markdown i tagu [więcej] do oddzielania podglądu od głównego tekstu."
+
+msgid "news.delete.title"
+msgstr "Usuń aktualność \"%s\""
+
+msgid "news.comments.delete.title"
+msgstr "Usuń komentarz \"%s\""
+
+msgid "notification.news.updated.introduction"
+msgstr "Aktualność \"%1$s\" została zaktualizowana"
+
+msgid "notification.news.updated.text"
+msgstr "Możesz ją zobaczyć pod adresem %3$s"
+
+msgid "form.search"
+msgstr "Szukaj"
+
+msgid "form.exact_match"
+msgstr "Dokładne dopasowanie"
+
+msgid "log.log"
+msgstr "Dzienniki"
+
+msgid "log.only_own"
+msgstr "Możesz oglądać tylko swoje dzienniki. Dzienniki innych użytkowników mogą być sprawdzane przez biurokratów."
+
+msgid "log.time"
+msgstr "Czas"
+
+msgid "log.level"
+msgstr "Poziom"
+
+msgid "log.message"
+msgstr "Wiadomość"
+
+msgid "settings.settings"
+msgstr "Ustawienia"
+
+msgid "settings.profile.entry_required"
+msgstr "Wejście wymagane"
+
+msgid "general.nick"
+msgstr "Nick"
+
+msgid "settings.profile.nick.already-taken"
+msgstr "Nick jest już zajęty."
+
+msgid "settings.profile.pronoun"
+msgstr "Zaimek"
+
+msgid "settings.profile.pronoun.info"
+msgstr "Będzie wyświetlany na Twojej stronie profilu oraz na listach wolontariuszy."
+
+msgid "settings.profile.firstname"
+msgstr "Imię"
+
+msgid "settings.profile.lastname"
+msgstr "Nazwisko"
+
+msgid "settings.profile.planned_arrival_date"
+msgstr "Planowana data przyjazdu"
+
+msgid "settings.profile.planned_departure_date"
+msgstr "Planowana data wyjazdu"
+
+msgid "settings.profile.mobile"
+msgstr "Telefon komórkowy"
+
+msgid "settings.profile.mobile_show"
+msgstr "Pokaż numer telefonu komórkowego innym użytkownikom, aby mogli się ze mną skontaktować."
+
+msgid "settings.profile.email-preferences"
+msgstr "Preferencje e-mailowe"
+
+msgid "general.email"
+msgstr "E-mail"
+
+msgid "settings.profile.email.already-taken"
+msgstr "Ten adres e-mail jest już zajęty."
+
+msgid "settings.profile.email_shiftinfo"
+msgstr "%s ma prawo wysyłać mi e-maile (np. gdy moje zmiany się zmieniają)."
+
+msgid "registration.email_system"
+msgstr "%s ma prawo wysyłać mi e-maile "
+"(np. gdy moje zmiany się zmieniają, na nowe wiadomości prywatne lub gdy pojawią się nowe aktualności)."
+
+msgid "registration.email_system.info"
+msgstr "Szczegółowe preferencje można ustawić na swoim profilu."
+
+msgid "registration.error"
+msgstr "Błąd rejestracji! Sprawdź, czy wypełniłeś wszystkie obowiązkowe pola!"
+
+msgid "settings.profile.email_news"
+msgstr "Powiadom mnie o nowych aktualnościach."
+
+msgid "settings.profile.email_messages"
+msgstr "Powiadom mnie o nowych wiadomościach prywatnych."
+
+msgid "settings.profile.email_by_human_allowed"
+msgstr "Zezwól organizacji na kontaktowanie się ze mną za pośrednictwem e-maila."
+
+msgid "settings.profile.email_goodie"
+msgstr "Aby ewentualnie otrzymać vouchery na następne podobne wydarzenie, zgadzam się "
+"na przechowywanie mojego nicka, adresu e-mail oraz godzin pracy do tego czasu."
+
+msgid "settings.profile.email_tshirt"
+msgstr "Aby ewentualnie otrzymać vouchery na następne podobne wydarzenie, zgadzam się "
+"na przechowywanie mojego nicka, adresu e-mail, godzin pracy oraz rozmiaru T-shirtu do tego czasu."
+
+msgid "settings.profile.privacy"
+msgstr "Możesz wycofać swoją zgodę podczas wydarzenia w ustawieniach swojego profilu, "
+"jak również po wydarzeniu wysyłając e-mail na adres <a href=\"mailto:%s\">%1$s</a>."
+
+msgid "settings.profile.shirt_size.hint"
+msgstr "Koszula o prostym kroju ma szerokie ramiona i bryłę, która jest prawie kwadratowa. "
+"Koszulka o dopasowanym kroju ma zakrzywioną boczną szew, która zwęża się w talii "
+"i rozszerza się na górze i na dole. "
+"Zazwyczaj koszule o dopasowanym kroju są mniejsze od koszul o prostym kroju w tym samym rozmiarze, "
+"a rozmiary różnią się między markami."
+
+msgid "settings.profile.shirt.link"
+msgstr "Więcej informacji"
+
+msgid "settings.profile.angeltypes.info"
+msgstr "Możesz zarządzać swoimi typami wolontariusz <a href=\"%s\">na stronie typów wolontariuszy</a>."
+
+msgid "profile.my_shifts"
+msgstr "Moje zmiany"
+
+msgid "settings.profile"
+msgstr "Profil"
+
+msgid "settings.password"
+msgstr "Hasło"
+
+msgid "settings.password.info"
+msgstr "Tutaj możesz zmienić swoje hasło."
+
+msgid "settings.password.confirmation-does-not-match"
+msgstr "Hasło i potwierdzenie hasła się nie zgadzają."
+
+msgid "settings.password.password"
+msgstr "Stare hasło"
+
+msgid "settings.password.new_password"
+msgstr "Nowe hasło"
+
+msgid "settings.password.new_password2"
+msgstr "Potwierdzenie hasła"
+
+msgid "settings.password.success"
+msgstr "Hasło zostało zmienione pomyślnie."
+
+msgid "settings.sessions"
+msgstr "Sesje"
+
+msgid "settings.sessions.info"
+msgstr "Tutaj możesz zobaczyć i usunąć swoje sesje przeglądarki."
+
+msgid "settings.sessions.current"
+msgstr "Bieżąca sesja"
+
+msgid "settings.sessions.id"
+msgstr "ID sesji"
+
+msgid "settings.sessions.last_activity"
+msgstr "Ostatnia aktywność"
+
+msgid "settings.theme"
+msgstr "Motyw"
+
+msgid "settings.theme.info"
+msgstr "Tutaj możesz zmienić swój motyw."
+
+msgid "settings.theme.success"
+msgstr "Motyw został pomyślnie zmieniony."
+
+msgid "settings.certificates"
+msgstr "Certyfikaty"
+
+msgid "settings.certificates.info"
+msgstr "Te informacje są widoczne tylko dla wspierających i administratorów."
+
+msgid "settings.certificates.title.ifsg"
+msgstr "Instrukcje zdrowotne"
+
+msgid "settings.certificates.driving_license"
+msgstr "Prawo jazdy"
+
+msgid "settings.certificates.has_car"
+msgstr ""
+"Posiadam własny samochód i jestem gotów go wykorzystać na wydarzenie (Otrzymasz "
+"zwrot kosztów paliwa)."
+
+msgid "settings.certificates.drive_car"
+msgstr "Samochód"
+
+msgid "settings.certificates.drive_3_5t"
+msgstr "3,5t Transporter"
+
+msgid "settings.certificates.drive_7_5t"
+msgstr "7,5t Ciężarówka"
+
+msgid "settings.certificates.drive_12t"
+msgstr "12t Ciężarówka"
+
+msgid "settings.certificates.drive_forklift"
+msgstr "Wózek widłowy"
+
+msgid "settings.certificates.ifsg_light"
+msgstr "Zostałem poinformowany o IfSG §43 (znane jako Frikadellendiplom light) na miejscu."
+
+msgid "settings.certificates.ifsg_light_admin"
+msgstr "Zostałem poinformowany o IfSG §43 (znane jako Frikadellendiplom light) na miejscu."
+
+msgid "settings.certificates.ifsg"
+msgstr "Otrzymałem instrukcję o §43 IfSG (znane jako Frikadellendiplom) z mojego departamentu zdrowia "
+"i drugą instrukcję od nas lub mojego pracodawcy/kierownika/stowarzyszenia w ciągu 3 miesięcy. "
+"Dodatkowo moja druga instrukcja nie jest starsza niż 2 lata."
+
+msgid "settings.certificates.ifsg_admin"
+msgstr "Otrzymał instrukcję o §43 IfSG (znane jako Frikadellendiplom) z departamentu zdrowia "
+"i drugą instrukcję od nas lub jego pracodawcy/kierownika/stowarzyszenia w ciągu 3 miesięcy. "
+"Dodatkowo druga instrukcja nie jest starsza niż 2 lata."
+
+msgid "settings.certificates.confirmed"
+msgstr "Certyfikat potwierdzony"
+
+msgid "settings.certificates.ifsg_confirmed.hint"
+msgstr "Twoja instrukcja zdrowotna została potwierdzona, nie możesz jej już samodzielnie zmieniać."
+
+msgid "settings.certificates.drive_confirmed.hint"
+msgstr "Twoje prawo jazdy zostało potwierdzone, nie możesz go już samodzielnie zmieniać."
+
+msgid "settings.certificates.confirmation.info"
+msgstr "Osobiście sprawdziłeś, że certyfikat/licencja spełniają wymagania."
+
+msgid "settings.certificates.success"
+msgstr "Certyfikaty zostały pomyślnie zaktualizowane."
+
+msgid "angeltype.ifsg.required"
+msgstr "Wymaga instrukcji zdrowotnej"
+
+msgid "ifsg.certificate"
+msgstr "Instrukcja zdrowotna"
+
+msgid "ifsg.certificate_light"
+msgstr "Instrukcja zdrowotna na miejscu"
+
+msgid "angeltype.ifsg.own"
+msgstr "Moja instrukcja zdrowotna"
+
+msgid "angeltype.ifsg.required.info.preview"
+msgstr "Ten typ wolontariusza wymaga instrukcji zdrowotnej."
+
+msgid "angeltype.ifsg.required.info"
+msgstr "Ten typ wolontariusza wymaga instrukcji zdrowotnej. Proszę wprowadź swoje informacje o instrukcji zdrowotnej!"
+
+msgid "angeltype.ifsg.required.info.here"
+msgstr "Dołączyłeś do typu wolontariusza, który wymaga instrukcji zdrowotnej. "
+"Proszę edytować swoje informacje o instrukcji zdrowotnej tutaj: %s."
+
+msgid "angeltype.driving_license.required.info.here"
+msgstr ""
+"Dołączyłeś do typu wolontariusza, który wymaga prawa jazdy. "
+"Proszę edytować swoje informacje o prawie jazdy tutaj: %s."
+
+msgid "angeltype.driving_license.required.info.preview"
+msgstr "Ten typ wolontariusza wymaga prawa jazdy."
+
+msgid "ifsg.info"
+msgstr "Informacje o instrukcji zdrowotnej"
+
+msgid "driving_license.info"
+msgstr "Informacje o prawie jazdy"
+
+msgid "settings.language"
+msgstr "Język"
+
+msgid "settings.language.info"
+msgstr "Tutaj możesz zmienić swój język."
+
+msgid "settings.language.success"
+msgstr "Język został pomyślnie zmieniony."
+
+msgid "settings.api"
+msgstr "API"
+
+msgid "settings.api.about"
+msgstr ""
+"API umożliwia interakcję z %s za pomocą programów zewnętrznych. "
+"Nie jest jeszcze kompletne, ale pracujemy nad jego rozszerzeniem.\n"
+"Punkt końcowy API znajduje się pod `%s` i jest opisany w [specyfikacji OpenAPI](%s)."
+
+msgid "settings.api.about.warning"
+msgstr ""
+"Nie udostępniaj swojego osobistego klucza API nikomu, ponieważ może być użyty do przeglądania Twoich danych osobowych "
+"i wprowadzania zmian w Twoim imieniu!"
+
+msgid "settings.api.shifts_json_show"
+msgstr "Pokaż eksport JSON zmian"
+
+msgid "settings.api.ical_show"
+msgstr "Pokaż eksport iCal"
+
+msgid "settings.api.news_show"
+msgstr "Pokaż kanały wiadomości"
+
+msgid "settings.api.key_show"
+msgstr "Pokaż klucz API"
+
+msgid "settings.api.key_reset"
+msgstr "Zresetuj klucz API"
+
+msgid "settings.api.key_reset_confirm"
+msgstr "Jeśli zresetujesz klucz API, musisz zaktualizować go we wszystkich swoich aplikacjach."
+
+msgid "settings.oauth"
+msgstr "Logowanie jednorazowe"
+
+msgid "settings.oauth.identity-provider"
+msgstr "Dostawca tożsamości"
+
+msgid "oauth.login"
+msgstr "Zaloguj się za pomocą zewnętrznego dostawcy"
+
+msgid "oauth.login-using-provider"
+msgstr "Zaloguj się za pomocą %s"
+
+msgid "form.connect"
+msgstr "Połącz"
+
+msgid "form.all"
+msgstr "Wszystko"
+
+msgid "form.disconnect"
+msgstr "Rozłącz"
+
+msgid "faq.faq"
+msgstr "FAQ"
+
+msgid "faq.questions_link"
+msgstr "Jeśli nie znajdziesz odpowiedzi, możesz <a href=\"%s\">zapytać organizatora</a>."
+
+msgid "faq.edit"
+msgstr "Edytuj wpis FAQ"
+
+msgid "faq.add"
+msgstr "Dodaj wpis FAQ"
+
+msgid "faq.delete.title"
+msgstr "Usuń FAQ \"%s\""
+
+msgid "question.questions"
+msgstr "Pytania"
+
+msgid "question.admin"
+msgstr "Odpowiedz na pytania"
+
+msgid "question.faq_link"
+msgstr "W przypadku ogólnych pytań zapoznaj się z naszym <a href=\"%s\">FAQ</a>."
+
+msgid "question.add"
+msgstr "Zadaj pytanie"
+
+msgid "question.edit"
+msgstr "Edytuj pytanie"
+
+msgid "question.question"
+msgstr "Pytanie"
+
+msgid "question.answer"
+msgstr "Odpowiedź"
+
+msgid "question.delete.title"
+msgstr "Usuń pytanie \"%s\""
+
+msgid "question.contact_options"
+msgstr "Inne opcje kontaktu: "
+
+msgid "tag.tags"
+msgstr "Tagi"
+
+msgid "tag.edit"
+msgstr "Edytuj tag"
+
+msgid "tag.add"
+msgstr "Utwórz nowy tag"
+
+msgid "tag.delete.title"
+msgstr "Usuń tag \"%s\""
+
+msgid "user.edit.goodie"
+msgstr "Edytuj nagrodę"
+
+msgid "user.goodie_score.enough"
+msgstr "Wystarczająco"
+
+msgid "user.goodie_score.value"
+msgstr "%s h"
+
+msgid "user.goodie_score"
+msgstr "Wynik nagród: %s"
+
+msgid "user.shirt_size"
+msgstr "Rozmiar T-shirts"
+
+msgid "user.active"
+msgstr "Aktywny"
+
+msgid "user.force_active"
+msgstr "Zawsze aktywny"
+
+msgid "user.force_food"
+msgstr "Nieograniczona ilość jedzenia"
+
+msgid "user.arrived"
+msgstr "Przybył"
+
+msgid "user.arrive"
+msgstr "Przybyć"
+
+msgid "user.got_goodie"
+msgstr "Otrzymano nagrodę"
+
+msgid "message.title"
+msgstr "Wiadomości"
+
+msgid "message.choose_angel"
+msgstr "Wybierz Wolontariusza"
+
+msgid "message.to_conversation"
+msgstr "Do rozmowy"
+
+msgid "message.message"
+msgstr "Wiadomość"
+
+msgid "angel"
+msgstr "Wolontariusz"
+
+msgid "worklog.add"
+msgstr "Dodaj dziennik pracy"
+
+msgid "worklog.edit"
+msgstr "Edytuj dziennik pracy"
+
+msgid "worklog.date"
+msgstr "Data pracy"
+
+msgid "worklog.hours"
+msgstr "Godziny pracy"
+
+msgid "worklog.description"
+msgstr "Opis"
+
+msgid "worklog.night_shift"
+msgstr "Dziennik pracy to nocna zmiana"
+
+msgid "worklog.delete"
+msgstr "Usuń dziennik pracy"
+
+msgid "worklog.delete.info"
+msgstr "Czy naprawdę chcesz usunąć dziennik pracy dla %s?"
+
+msgid "voucher.vouchers"
+msgstr "Vouchery"
+
+msgid "voucher.edit"
+msgstr "Edytuj vouchery"
+
+msgid "voucher.eligible"
+msgstr "Wolontariusz może otrzymać kolejne %d voucherów."
+
+msgid "voucher.eligible.force"
+msgstr "Wolontariusz może otrzymać <s>%d</s> nieograniczoną ilość voucherów."
+
+msgid "voucher.count"
+msgstr "Liczba wydanych voucherów"
+
+msgid "user.state.vouchers"
+msgstr "Otrzymano %s z %s voucherów"
+
+msgid "user.state.vouchers.force"
+msgstr "<s>%d</s> nieograniczone"
+
+msgid "angeltypes.angeltypes"
+msgstr "Typy Wolontariuszy"
+
+msgid "angeltypes.about"
+msgstr "Opis zespołów"
+
+msgid "angeltypes.about.text"
+msgstr "Tutaj znajdziesz listę zespołów i ich zadań. Jeśli masz dalsze pytania, "
+"zapoznaj się z <a href=\"%s\">FAQ</a>."
+
+msgid "angeltypes.restricted"
+msgstr "Wymaga wprowadzenia"
+
+msgid "angeltypes.restricted.info"
+msgstr "Typy wolontariuszy, które wymagają wprowadzenia, mogą być używane przez wolontariusza "
+"tylko jeśli są włączone przez wspierającego (podwójne potwierdzenie)."
+
+msgid "angeltypes.restricted.hint"
+msgstr "Ten typ wolontariusza wymaga uczestnictwa w spotkaniu wprowadzającym. "
+"Mogą tam być dodatkowe informacje w opisie."
+
+msgid "angeltypes.can-change-later"
+msgstr "Możesz zmienić swój wybór później w ustawieniach."
+
+msgid "angeltypes.shift.self_signup.info"
+msgstr "Typy wolontariuszy, które mają włączoną samodzielną rejestrację zmian, umożliwiają wolontariuszom samodzielne zapisywanie się na swoje zmiany, "
+"jeśli samodzielna rejestracja zmian jest wyłączona, tylko wspierający i administratorzy mogą zapisywać wolontariuszy na zmiany tych typów wolontariuszy."
+
+msgid "shift.self_signup"
+msgstr "Samodzielna rejestracja zmian"
+
+msgid "shift.self_signup.allowed"
+msgstr "Rejestracja własna do zmian dozwolona"
+
+msgid "angeltypes.hide_on_shift_view"
+msgstr "Ukryj w widoku zmian"
+
+msgid "angeltypes.hide_on_shift_view.info"
+msgstr "Jeśli zaznaczone, tylko administracja i członkowie tego typu wolontariusza "
+"mogą zobaczyć opcję filtru dla tego typu wolontariusza na stronie zmian"
+
+msgid "location.location"
+msgstr "Lokalizacja"
+
+msgid "location.locations"
+msgstr "Lokalizacje"
+
+msgid "location.map_url"
+msgstr "Mapa"
+
+msgid "location.required_angels"
+msgstr "Wymagani wolontariusze (przy importowaniu harmonogramu lub kopiowaniu)"
+
+msgid "location.map_url.info"
+msgstr "Mapa zostanie osadzona na stronie lokalizacji jako iframe."
+
+msgid "location.create.title"
+msgstr "Utwórz lokalizację"
+
+msgid "location.edit.title"
+msgstr "Edytuj lokalizację"
+
+msgid "location.delete.title"
+msgstr "Usuń lokalizację \"%s\""
+
+msgid "shifttype.shifttypes"
+msgstr "Typy zmian"
+
+msgid "shifttype.edit.title"
+msgstr "Edytuj typ zmiany"
+
+msgid "shifttype.create.title"
+msgstr "Utwórz typ zmiany"
+
+msgid "shifttype.delete.title"
+msgstr "Usuń typ zmiany \"%s\""
+
+msgid "shifttype.required_angels"
+msgstr "Wymagani wolontariuszy (przy importowaniu harmonogramu lub kopiowaniu)"
+
+msgid "shifttype.edit.signup_advance_hours"
+msgstr "Godziny wcześniejszej rejestracji"
+
+msgid "shifttype.edit.signup_advance_hours.info"
+msgstr "Liczba godzin przed rozpoczęciem zmiany, w których dozwolona jest rejestracja"
+
+msgid "event.day"
+msgstr "Dzień %1$d"
+
+msgid "dashboard.day"
+msgstr "Dzień"
+
+msgid "registration.title"
+msgstr "Rejestracja wolontariuszy"
+
+msgid "registration.login_data"
+msgstr "Dane logowania"
+
+msgid "registration.event_data"
+msgstr "Dane wydarzenia"
+
+msgid "registration.what_todo"
+msgstr "Co chcesz zrobić?"
+
+msgid "registration.jobs"
+msgstr "Możesz znaleźć więcej informacji o tym, jak nam pomóc w "
+"<a href=\"%s\" target=\"_blank\">Opisach zespołów / prac</a>."
+
+msgid "registration.register"
+msgstr "Zarejestruj się"
+
+msgid "tshirt.required.hint"
+msgstr "Proszę określić rozmiar koszulki w swoich ustawieniach!"
+
+msgid "dect.required.hint"
+msgstr ""
+"Proszę określić numer telefonu DECT w swoich ustawieniach! "
+"Jeśli nie masz telefonu DECT, podaj '-'."
+
+msgid "pronoun.required.hint"
+msgstr "Proszę wprowadzić zaimek w swoich ustawieniach!"
+
+msgid "firstname.required.hint"
+msgstr "Proszę wprowadzić imię w swoich ustawieniach!"
+
+msgid "lastname.required.hint"
+msgstr "Proszę wprowadzić nazwisko w swoich ustawieniach!"
+
+msgid "mobile.required.hint"
+msgstr "Proszę wprowadzić numer telefonu komórkowego w swoich ustawieniach!"
+
+msgid "confirmation.delete"
+msgstr "Czy na pewno chcesz to usunąć?"
+
+msgid "general.datetime"
+msgstr "Y-m-d H:i"
+
+msgid "general.date"
+msgstr "Y-m-d"
+
+msgid "general.id"
+msgstr "ID"
+
+msgid "general.user"
+msgstr "Użytkownik"
+
+msgid "general.count"
+msgstr "Liczba"
+
+msgid "general.created_at"
+msgstr "Utworzono"
+
+msgid "shifts.random"
+msgstr "Losowa zmiana"
+
+msgid "shifts.history"
+msgstr "Historia zmian"
+
+msgid "shifts.history.schedule"
+msgstr "Harmonogram: %s"
+
+msgid "shifts.history.delete_all.title"
+msgstr "Usuń %u zmian"
+
+msgid "shifts.start"
+msgstr "Początek"
+
+msgid "shifts.end"
+msgstr "Koniec"
+
+msgid "user.info"
+msgstr "Informacje o użytkowniku"
+
+msgid "user.info.hint"
+msgstr ""
+"Wyświetlane dla koordynatorów zmian i administratorów w widoku użytkownika. "
+"Jeśli wolontariusz nie jest oznaczony jako obecny, informacja o użytkowniku usuwa powiadomienie o nieobecności w menu systemowym wolontariuszy."
+
+msgid "user_info.not_arrived_hint"
+msgstr "Jeśli chcesz zarejestrować się do zmian, zapraszamy do organizatora."
+
+msgid "email.greeting"
+msgstr "Cześć %s,"
+
+msgid "email.introduction"
+msgstr "Oto wiadomość dla Ciebie od %s:"
+
+msgid "email.footer"
+msgstr ""
+"Ten e-mail został wygenerowany automatycznie i nie jest podpisany. "
+"Otrzymałeś ten e-mail, ponieważ jesteś zarejestrowany w %s."
+
+msgid "password.email.message"
+msgstr "Proszę odwiedzić %s, aby odzyskać hasło."
+
+msgid "password.minimal_length"
+msgstr "Minimalna długość %d znaków"
+
+msgid "footer.eventinfo.name_start_end"
+msgstr "%1$s, od %2$s do %3$s"
+
+msgid "footer.eventinfo.name_start"
+msgstr "%1$s, zaczynając %2$s"
+
+msgid "footer.eventinfo.start_end"
+msgstr "Wydarzenie od %1$s do %2$s"
+
+msgid "footer.issues"
+msgstr "Błędy/Funkcje"
+
+msgid "footer.github"
+msgstr "Platforma rozwoju"
+
+msgid "credits.title"
+msgstr "Uznanie"
+
+msgid "general.register"
+msgstr "Zarejestruj się"
+
+msgid "shift.next"
+msgstr "Następna zmiana"
+
+msgid "shift.previous"
+msgstr "Poprzednia zmiana"
+
+msgid "general.shift"
+msgstr "Zmiana"
+
+msgid "shift.angeltype_source"
+msgstr "Potrzebni wolontariusze z: %s"
+
+msgid "shift.angeltype_source.shift_type"
+msgstr "Harmonogram %s przez typ zmiany %s"
+
+msgid "shift.angeltype_source.location"
+msgstr "Harmonogram %s przez lokalizację %s"
+
+msgid "general.logout"
+msgstr "Wyloguj się"
+
+msgid "credits.source"
+msgstr "Kod źródłowy"
+
+msgid "credits.version"
+msgstr "Wersja: _%s_"
+
+msgid "design.title"
+msgstr "Projekt"
+
+msgid "login.welcome"
+msgstr "Witamy w %s!"
+
+msgid "event.buildup.start"
+msgstr "Przygotowania się zaczynają"
+
+msgid "event.starts"
+msgstr "Wydarzenie się zaczyna"
+
+msgid "event.ends"
+msgstr "Wydarzenie się kończy"
+
+msgid "event.teardown.ends"
+msgstr "Rozbiórka kończy się"
+
+msgid "login.password.reset"
+msgstr "Zapomniałem hasła"
+
+msgid "login.registration"
+msgstr "Proszę zarejestrować się, jeśli chcesz nam pomóc!"
+
+msgid "login.registration.external"
+msgstr "Rejestracja jest dostępna tylko poprzez zewnętrzne logowanie."
+
+msgid "login.registration.disabled"
+msgstr "Rejestracja jest wyłączona."
+
+msgid "login.do"
+msgstr "Co mogę zrobić?"
+
+msgid "login.jobs"
+msgstr "Przeczytaj o zespołach dostępych na wydarzeniu."
+
+msgid "login.foxcons.button"
+msgstr "Zaloguj przy pomocy Foxconsa"
+
+msgid "login.cookies"
+msgstr "Pamiętaj: Musisz aktywować pliki cookie!"
+
+msgid "general.angel"
+msgstr "Wolontariusz"
+
+msgid "title.date"
+msgstr "Data"
+
+msgid "password.reset.confirm"
+msgstr "Potwierdź hasło"
+
+msgid "password.recovery.success"
+msgstr "Wysłaliśmy Ci e-mail zawierający link do odzyskania hasła."
+
+msgid "password.reset.title"
+msgstr "Odzyskiwanie hasła"
+
+msgid "password.recovery.text"
+msgstr ""
+"Wyślemy Ci e-mail z linkiem do odzyskania hasła. "
+"Proszę użyj adresu e-mail, który podałeś podczas rejestracji."
+
+msgid "form.recover"
+msgstr "Odzyskaj"
+
+msgid "notification.shift.updated.introduction"
+msgstr "Twoja zmiana uległa zmianie:"
+
+msgid "notification.shift.updated.type"
+msgstr "Typ zmiany zmienił się z %s na %s"
+
+msgid "notification.shift.updated.title"
+msgstr "Tytuł zmiany zmienił się z %s na %s"
+
+msgid "notification.shift.updated.description"
+msgstr "Opis zmiany się zmienił"
+
+msgid "notification.shift.updated.start"
+msgstr "Początek zmiany zmienił się z %s na %s"
+
+msgid "notification.shift.updated.end"
+msgstr "Koniec zmiany zmienił się z %s na %s"
+
+msgid "notification.shift.updated.location"
+msgstr "Lokalizacja zmiany przeniesiona z %s do %s"
+
+msgid "notification.shift.updated.shift"
+msgstr "Zaktualizowana zmiana:"
+
+msgid "general.actions"
+msgstr "Akcje"
+
+msgid "general.back"
+msgstr "Wstecz"
+
+msgid "admin_shifts.no_locations"
+msgstr "Nie utworzono jeszcze żadnej lokalizacji. Zmiany nie mogą być tworzone bez niej."
+
+msgid "admin_shifts.no_shifttypes"
+msgstr "Nie utworzono jeszcze żadnego typu zmiany. Zmiany nie mogą być tworzone bez niego."
+
+msgid "admin_shifts.no_angeltypes"
+msgstr "Nie utworzono jeszcze żadnego typu wolontariusza. Zmiany nie mogą być tworzone bez niego."
+
+msgid "shift.sign_out.hint"
+msgstr "Możesz samodzielnie się wylogować do %s godzin przed rozpoczęciem zmiany. "
+"Jeśli nie możesz uczestniczyć w zmianie, poproś organizatora o wylogowanie."
+
+msgid "freeload.info.goodie"
+msgstr "Nie byłeś obecny na tej zmianie. "
+"Podwójna długość zmiany została odjęta od Twojego %s. Prosimy o kontakt z organizatorem, jeśli masz pytania."
+
+msgid "freeload.info"
+msgstr "Nie byłeś obecny na tej zmianie. "
+"Prosimy o kontakt z organizatorem, jeśli masz pytania."
+
+msgid "freeload.freeloader.info"
+msgstr "Nie byłeś obecny na co najmniej %s zmianach. Dlatego rejestracja na zmiany jest zablokowana. "
+"Proszę udać się do organizatora w celu odblokowania."
+
+msgid "freeload.freeloaded.info.goodie"
+msgstr ""
+"Jeśli wolontariusz nie był obecny na zmianie, podwójna długość zmiany jest odjęta od %s. "
+"Jeśli %s zmian jest nieobecnych, rejestracja zmian jest zablokowana dla wolontariusza."
+
+msgid "freeload.freeloaded.info"
+msgstr ""
+"wolontariusz nie był obecny na zmianie. "
+"Jeśli %s zmian jest nieobecnych, rejestracja zmian jest zablokowana dla wolontariusza."
+
+msgid "config.config"
+msgstr "Konfiguracja"
+
+msgid "config.edit.success"
+msgstr "Konfiguracja została pomyślnie zaktualizowana"
+
+# Auto-generated translations added to cover missing Polish keys from en_US/de_DE
+msgid "Active"
+msgstr "Aktywny"
+
+msgid "Active angels"
+msgstr "Aktywni wolontariusze"
+
+msgid "Added by %s at %s"
+msgstr "Dodane przez %s o %s"
+
+msgid "Added supporter rights for %s to %s."
+msgstr "Przyznano prawa supportera dla %s użytkownikowi %s."
+
+msgid "Additional description"
+msgstr "Dodatkowy opis"
+
+msgid "Add more angels"
+msgstr "Dodaj więcej wolontariuszy"
+
+msgid "Add supporter rights"
+msgstr "Przyznaj prawa supportera"
+
+msgid "Add user to angel type"
+msgstr "Dodaj użytkownika do typu wolontariusza"
+
+msgid "Admin"
+msgstr "Administrator"
+
+msgid "All"
+msgstr "Wszystko"
+
+msgid "All Angels"
+msgstr "Wszyscy wolontariusze"
+
+msgid "All users"
+msgstr "Wszyscy użytkownicy"
+
+msgid "Angel:"
+msgstr "Wolontariusz:"
+
+msgid "Angel got a goodie."
+msgstr "Wolontariusz otrzymał upominek."
+
+msgid "Angel got no goodie."
+msgstr "Wolontariusz nie otrzymał upominku."
+
+msgid "Angel has been marked as active."
+msgstr "Wolontariusz został oznaczony jako aktywny."
+
+msgid "Angel has been marked as arrived."
+msgstr "Wolontariusz został oznaczony jako przybyły."
+
+msgid "Angel has been marked as not active."
+msgstr "Wolontariusz został oznaczony jako nieaktywny."
+
+msgid "Angel has no valid T-shirt size. T-shirt was not set."
+msgstr "Wolontariusz nie ma ważnego rozmiaru koszulki. Koszulka nie została ustawiona."
+
+msgid "Angel not found."
+msgstr "Wolontariusz nie został znaleziony."
+
+msgid "Angels currently working"
+msgstr "Wolontariusze aktualnie pracujący"
+
+msgid "Angels needed for nightshifts"
+msgstr "Wolontariusze potrzebni na nocne zmiany"
+
+msgid "Angels needed in the next 3 hrs"
+msgstr "Wolontariusze potrzebni w ciągu następnych 3 godzin"
+
+msgid "Angel type"
+msgstr "Typ wolontariusza"
+
+msgid "Angel type saved."
+msgstr "Typ wolontariusza zapisany."
+
+msgid "Angel type %s deleted."
+msgstr "Typ wolontariusza %s usunięty."
+
+msgid "Answer questions"
+msgstr "Odpowiedz na pytania"
+
+msgid "API Settings"
+msgstr "Ustawienia API"
+
+msgid "Apply"
+msgstr "Zastosuj"
+
+msgid "Arrival date"
+msgstr "Data przybycia"
+
+msgid "Arrival statistics"
+msgstr "Statystyki przybyć"
+
+msgid "Arrive angels"
+msgstr "Zaznacz przybycie wolontariuszy"
+
+msgid "Arrived at %s"
+msgstr "Przybył o %s"
+
+msgid "arrived sum"
+msgstr "Suma przybyć"
+
+msgid "Assigned to Shift"
+msgstr "Przydzielony do zmiany"
+
+msgid "Back to profile"
+msgstr "Powrót do profilu"
+
+msgid "Changes were saved."
+msgstr "Zmiany zostały zapisane."
+
+msgid "Comment (for your eyes only):"
+msgstr "Komentarz (tylko dla Ciebie):"
+
+msgid "Configured T-shirts"
+msgstr "Skonfigurowane koszulki"
+
+msgid "Confirm"
+msgstr "Potwierdź"
+
+msgid "Confirm all"
+msgstr "Potwierdź wszystko"
+
+msgid "Confirm all users"
+msgstr "Potwierdź wszystkich użytkowników"
+
+msgid "Confirm angel type for user"
+msgstr "Potwierdź typ wolontariusza dla użytkownika"
+
+msgid "Confirmed all users for angel type %s."
+msgstr "Wszyscy użytkownicy dla typu wolontariusza %s zostali potwierdzeni."
+
+msgid "Confirm user"
+msgstr "Potwierdź użytkownika"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Copy needed angels from location settings"
+msgstr "Skopiuj potrzebnych wolontariuszy z ustawień lokalizacji"
+
+msgid "Copy needed angels from shift type settings"
+msgstr "Skopiuj potrzebnych wolontariuszy z ustawień typu zmiany"
+
+msgid "Create angel type"
+msgstr "Utwórz typ wolontariusza"
+
+msgid "Create a shift over midnight."
+msgstr "Utwórz zmianę obejmującą północ."
+
+msgid "created at %s by %s"
+msgstr "utworzone %s przez %s"
+
+msgid "Create multiple shifts"
+msgstr "Utwórz wiele zmian"
+
+msgid "Create multiple shifts with variable length"
+msgstr "Utwórz wiele zmian o zmiennej długości"
+
+msgid "Create one shift"
+msgstr "Utwórz jedną zmianę"
+
+msgid "Create shifts"
+msgstr "Utwórz zmiany"
+
+msgid "Date, Duration:"
+msgstr "Data, Czas trwania:"
+
+msgid "Day & Time"
+msgstr "Dzień i godzina"
+
+msgid "Delete angel type %s"
+msgstr "Usuń typ wolontariusza %s"
+
+msgid "Delete %s"
+msgstr "Usuń %s"
+
+msgid "Denied all users for angel type %s."
+msgstr "Wszyscy użytkownicy dla typu wolontariusza %s zostali odrzuceni."
+
+msgid "Deny"
+msgstr "Odrzuć"
+
+msgid "Deny all"
+msgstr "Odrzuć wszystkich"
+
+msgid "Deny all users"
+msgstr "Odrzuć wszystkich użytkowników"
+
+msgid "%d helper needed"
+msgstr "%d potrzebny pomocnik"
+
+msgid "Do you really want to add %s to %s?"
+msgstr "Czy na pewno chcesz dodać %s do %s?"
+
+msgid "Do you really want to add supporter rights for %s to %s?"
+msgstr "Czy na pewno chcesz przyznać prawa supportera dla %s użytkownikowi %s?"
+
+msgid "Do you really want to confirm all users for %s?"
+msgstr "Czy na pewno chcesz potwierdzić wszystkich użytkowników dla %s?"
+
+msgid "Do you really want to confirm %s for %s?"
+msgstr "Czy na pewno chcesz potwierdzić %s dla %s?"
+
+msgid "Do you really want to deny all users for %s?"
+msgstr "Czy na pewno chcesz odrzucić wszystkich użytkowników dla %s?"
+
+msgid "Do you really want to leave \"%2$s\"?"
+msgstr "Czy na pewno chcesz opuścić \"%2$s\"?"
+
+msgid "Do you really want to remove \"%s\" from \"%s\"?"
+msgstr "Czy na pewno chcesz usunąć \"%s\" z \"%s\"?"
+
+msgid "Do you really want to remove supporter rights for %s from %s?"
+msgstr "Czy na pewno chcesz cofnąć prawa supportera dla %s z %s?"
+
+msgid "Do you want to delete angel type %s?"
+msgstr "Czy chcesz usunąć typ wolontariusza %s?"
+
+msgid "Do you want to delete the shift \"%s\" from %s to %s?"
+msgstr "Czy chcesz usunąć zmianę \"%s\" od %s do %s?"
+
+msgid "Do you want to join %2$s?"
+msgstr "Czy chcesz dołączyć do %2$s?"
+
+msgid "Do you want to sign off from your shift %s from %s to %s as %s?"
+msgstr "Czy chcesz się wypisać z Twojej zmiany %s od %s do %s jako %s?"
+
+msgid "Do you want to sign off %s from shift %s from %s to %s as %s?"
+msgstr "Czy chcesz wypisać %s z zmiany %s od %s do %s jako %s?"
+
+msgid "Do you want to sign up for this shift as %s?"
+msgstr "Czy chcesz zapisać się na tę zmianę jako %s?"
+
+msgid "Do you want to sign up the following user for this shift?"
+msgstr "Czy chcesz zapisać następującego użytkownika na tę zmianę?"
+
+msgid "Do you want to sign up the following user for this shift as %s?"
+msgstr "Czy chcesz zapisać następującego użytkownika na tę zmianę jako %s?"
+
+msgid "Driver"
+msgstr "Kierowca"
+
+msgid "Duration"
+msgstr "Czas trwania"
+
+msgid "Edit certificates"
+msgstr "Edytuj certyfikaty"
+
+msgid "edited at %s by %s"
+msgstr "edytowano %s przez %s"
+
+msgid "Edit group"
+msgstr "Edytuj grupę"
+
+msgid "Edit %s"
+msgstr "Edytuj %s"
+
+msgid "Edit shift entry"
+msgstr "Edytuj wpis zmiany"
+
+msgid "Edit user"
+msgstr "Edytuj użytkownika"
+
+msgid "ended"
+msgstr "zakończony"
+
+msgid "Filter"
+msgstr "Filtr"
+
+msgid "Filtered"
+msgstr "Przefiltrowane"
+
+msgid "Food"
+msgstr "Jedzenie"
+
+msgid "Force active"
+msgstr "Wymuś aktywność"
+
+msgid "Forced"
+msgstr "Wymuszone"
+
+msgid "Force food"
+msgstr "Wymuś jedzenie"
+
+msgid "free"
+msgstr "wolny"
+
+msgid "Free angels"
+msgstr "Wolni wolontariusze"
+
+msgid "Freeload comment (Only for shift coordination and supporters):"
+msgstr "Komentarz dotyczący nieobecności (tylko dla koordynatorów i supporterów):"
+
+msgid "Freeloaded"
+msgstr "Nieobecny (odnotowany)"
+
+msgid "Freeloaded by %s"
+msgstr "Nieobecny od %s"
+
+msgid "Freeloader"
+msgstr "Nieobecny"
+
+msgid "Freeloads"
+msgstr "Nieobecności"
+
+msgid "Fullscreen"
+msgstr "Pełny ekran"
+
+msgid "Given goodies"
+msgstr "Przyznane upominki"
+
+msgid "Given T-shirts"
+msgstr "Przyznane koszulki"
+
+msgid "goodie"
+msgstr "Upominek"
+
+msgid "Goodie"
+msgstr "Upominek"
+
+msgid "Goodie actions"
+msgstr "Akcje związane z upominkami"
+
+msgid "Goodie score"
+msgstr "Punkty za upominki"
+
+msgid "Goodie statistic"
+msgstr "Statystyka upominków"
+
+msgid "Group rights"
+msgstr "Prawa grupy"
+
+msgid "Has car"
+msgstr "Ma samochód"
+
+msgid "Help needed"
+msgstr "Potrzebna pomoc"
+
+msgid "Here you can define the user groups of the angel:"
+msgstr "Tutaj możesz zdefiniować grupy użytkowników wolontariusza:"
+
+msgid "Here you can reset the password of this angel:"
+msgstr "Tutaj możesz zresetować hasło tego wolontariusza:"
+
+msgid "Hide at Registration"
+msgstr "Ukryj przy rejestracji"
+
+msgid "History ID: %s"
+msgstr "ID historii: %s"
+
+msgid "Hours to be worked"
+msgstr "Godziny do przepracowania"
+
+msgid "How many angels should be active?"
+msgstr "Ilu wolontariuszy powinno być aktywnych?"
+
+msgid "iCal Export"
+msgstr "Eksport iCal"
+
+msgid "iCal export and API"
+msgstr "Eksport iCal oraz API"
+
+msgid "If the angel is active, it can claim a goodie. If goodie is set to 'Yes', the angel already got their goodie."
+msgstr "Jeśli wolontariusz jest aktywny, może odebrać upominek. Jeśli upominek ustawiony jest na 'Tak', wolontariusz już go otrzymał."
+
+msgid "Join"
+msgstr "Dołącz"
+
+msgid "Join %s"
+msgstr "Dołącz do %s"
+
+msgid "JSON Export"
+msgstr "Eksport JSON"
+
+msgid "last 4h"
+msgstr "ostatnie 4h"
+
+msgid "last 8h"
+msgstr "ostatnie 8h"
+
+msgid "Last login"
+msgstr "Ostatnie logowanie"
+
+msgid "Last shift"
+msgstr "Ostatnia zmiana"
+
+msgid "Leave"
+msgstr "Opuść"
+
+msgid "Leave angel type"
+msgstr "Opuść typ wolontariusza"
+
+msgid "Length"
+msgstr "Długość"
+
+msgid "Length (in minutes)"
+msgstr "Długość (w minutach)"
+
+msgid "Location"
+msgstr "Lokalizacja"
+
+msgid "Location:"
+msgstr "Lokalizacja:"
+
+msgid "Marked angels."
+msgstr "Oznaczeni wolontariusze."
+
+msgid "m-d"
+msgstr "m-d"
+
+msgid "Member"
+msgstr "Członek"
+
+msgid "Members"
+msgstr "Członkowie"
+
+msgid "Membership"
+msgstr "Członkostwo"
+
+msgid "Mode"
+msgstr "Tryb"
+
+msgid "My driving license"
+msgstr "Moje prawo jazdy"
+
+msgid "Name & Workmates"
+msgstr "Imię i współpracownicy"
+
+msgid "Needed angels"
+msgstr "Potrzebni wolontariusze"
+
+msgid "Needed angels:"
+msgstr "Potrzebni wolontariusze:"
+
+msgid "next 4h"
+msgstr "następne 4h"
+
+msgid "next 8h"
+msgstr "następne 8h"
+
+msgid "Next shift %c"
+msgstr "Następna zmiana %c"
+
+msgid "Night shifts between %d and %d am are multiplied by %d for the goodie score."
+msgstr "Nocne zmiany pomiędzy %d a %d są mnożone przez %d w obliczeniu punktów za upominki."
+
+msgid "No"
+msgstr "Nie"
+
+msgid "No."
+msgstr "Nr."
+
+msgid "No data found."
+msgstr "Brak danych."
+
+msgid "None"
+msgstr "Brak"
+
+msgid "No shifts found."
+msgstr "Nie znaleziono zmian."
+
+msgid "No supporter update given."
+msgstr "Nie podano aktualizacji supportera."
+
+msgid "Not arrived"
+msgstr "Nie przybył"
+
+msgid "Not arrived (Planned: %s)"
+msgstr "Nie przybył (planowane: %s)"
+
+msgid "not yet possible"
+msgstr "jeszcze nie możliwe"
+
+msgid "Number of shifts: %s"
+msgstr "Liczba zmian: %s"
+
+msgid "Occupancy"
+msgstr "Zajętość"
+
+msgid "occupied"
+msgstr "zajęte"
+
+msgid "Other angel type needed/collides with my shifts"
+msgstr "Inny typ wolontariusza wymagany/koliduje z moimi zmianami"
+
+msgid "out of %s"
+msgstr "z %s"
+
+msgid "Own"
+msgstr "Własne"
+
+msgid "Password reset done."
+msgstr "Reset hasła zakończony."
+
+msgid "Password reset in progress"
+msgstr "Reset hasła w toku"
+
+msgid "Planned arrival"
+msgstr "Planowane przybycie"
+
+msgid "Planned arrival statistics"
+msgstr "Statystyki planowanych przybyć"
+
+msgid "Planned departure"
+msgstr "Planowany wyjazd"
+
+msgid "Planned departure statistics"
+msgstr "Statystyki planowanych wyjazdów"
+
+msgid "please arrive for signup"
+msgstr "proszę przybyć, aby się zarejestrować"
+
+msgid "Please check the name. Maybe it already exists."
+msgstr "Proszę sprawdzić nazwę. Może już istnieje."
+
+msgid "Please check the needed angels for team %s."
+msgstr "Proszę sprawdzić wymaganych wolontariuszy dla zespołu %s."
+
+msgid "Please check your input for needed angels of type %s."
+msgstr "Proszę sprawdzić wpisy dotyczące wymaganych wolontariuszy typu %s."
+
+msgid "Please enter a freeload comment!"
+msgstr "Proszę wprowadzić komentarz dotyczący nieobecności!"
+
+msgid "Please enter a number of angels to be marked as active."
+msgstr "Proszę wprowadzić liczbę wolontariuszy do oznaczenia jako aktywni."
+
+msgid "Please enter a shift duration in minutes."
+msgstr "Proszę wprowadzić długość zmiany w minutach."
+
+msgid "Please enter a valid ending time for the shifts."
+msgstr "Proszę wprowadzić prawidłowy czas zakończenia zmiany."
+
+msgid "Please enter a valid starting time for the shifts."
+msgstr "Proszę wprowadzić prawidłowy czas rozpoczęcia zmiany."
+
+msgid "Please select a location."
+msgstr "Proszę wybrać lokalizację."
+
+msgid "Please select a mode."
+msgstr "Proszę wybrać tryb."
+
+msgid "Please select a mode for needed angels."
+msgstr "Proszę wybrać tryb dla wymaganych wolontariuszy."
+
+msgid "Please select an end time."
+msgstr "Proszę wybrać czas zakończenia."
+
+msgid "Please select a shift type."
+msgstr "Proszę wybrać typ zmiany."
+
+msgid "Please select a start time."
+msgstr "Proszę wybrać czas rozpoczęcia."
+
+msgid "Please select needed angels."
+msgstr "Proszę wybrać potrzebnych wolontariuszy."
+
+msgid "Please split the shift-change hours by colons."
+msgstr "Proszę rozdzielić godziny zmian dwukropkami."
+
+msgid "Please use markdown for the description."
+msgstr "Proszę użyć Markdown w opisie."
+
+msgid "Please validate the change hour %s. It should be between 00:00 and 24:00."
+msgstr "Proszę sprawdzić godzinę zmiany %s. Powinna być pomiędzy 00:00 a 24:00."
+
+msgid "Primary contact person/desk for user questions."
+msgstr "Główna osoba/kontakt do pytań użytkowników."
+
+msgid "Privileges"
+msgstr "Uprawnienia"
+
+msgid "Public Dashboard"
+msgstr "Publiczny pulpit"
+
+msgid "Remove"
+msgstr "Usuń"
+
+msgid "Remove active"
+msgstr "Usuń aktywnego"
+
+msgid "Removed from Shift"
+msgstr "Usunięto ze zmiany"
+
+msgid "Removed supporter rights for %s from %s."
+msgstr "Cofnięto prawa supportera dla %s od %s."
+
+msgid "Remove goodie"
+msgstr "Usuń upominek"
+
+msgid "Remove supporter rights"
+msgstr "Cofnij prawa supportera"
+
+msgid "Requires driver license"
+msgstr "Wymaga prawa jazdy"
+
+msgid "Reset"
+msgstr "Resetuj"
+
+msgid "Reset arrival state for %s?"
+msgstr "Zresetować stan przybycia dla %s?"
+
+msgid "Reset done. Angel has not arrived."
+msgstr "Reset zakończony. Wolontariusz nie przybył."
+
+msgid "Reset to previous state"
+msgstr "Przywróć poprzedni stan"
+
+msgid "Rights"
+msgstr "Prawa"
+
+msgid "%s (already in shift)"
+msgstr "%s (już na zmianie)"
+
+msgid "%s confirmed for angel type %s."
+msgstr "%s potwierdzony dla typu wolontariusza %s."
+
+msgid "Search angel:"
+msgstr "Wyszukaj wolontariusza:"
+
+msgid "Set active"
+msgstr "Ustaw aktywny"
+
+msgid "%s has been subscribed to the shift."
+msgstr "%s został zapisany na zmianę."
+
+msgid "%s has done enough."
+msgstr "%s wykonał wystarczająco dużo pracy."
+
+msgid "Shift change hours"
+msgstr "Godziny zmiany"
+
+msgid "Shift could not be found."
+msgstr "Nie można znaleźć zmiany."
+
+msgid "Shift deleted."
+msgstr "Zmiana usunięta."
+
+msgid "Shift ended %c"
+msgstr "Zmiana zakończona %c"
+
+msgid "Shift ends %c"
+msgstr "Zmiana kończy się %c"
+
+msgid "Shift entry removed."
+msgstr "Wpis zmiany usunięty."
+
+msgid "Shift is full"
+msgstr "Zmiana jest pełna"
+
+msgid "Shift is running/has ended, you have not arrived or signup is blocked otherwise"
+msgstr "Zmiana trwa/się zakończyła, nie przybyłeś lub rejestracja jest zablokowana"
+
+msgid "Shift saved."
+msgstr "Zmiana zapisana."
+
+msgid "Shifts created."
+msgstr "Zmiany utworzone."
+
+msgid "Shift sign off"
+msgstr "Wypisanie ze zmiany"
+
+msgid "Shift signup"
+msgstr "Zapis na zmianę"
+
+msgid "Shift started %c"
+msgstr "Zmiana rozpoczęta %c"
+
+msgid "Shift type"
+msgstr "Typ zmiany"
+
+msgid "Shift updated."
+msgstr "Zmiana zaktualizowana."
+
+msgid "Show all shifts"
+msgstr "Pokaż wszystkie zmiany"
+
+msgid "Show on dashboard"
+msgstr "Pokaż na pulpicie"
+
+msgid "Sign off"
+msgstr "Wypisz się"
+
+msgid "Sign up"
+msgstr "Zapisz się"
+
+msgid "Size"
+msgstr "Rozmiar"
+
+msgid "%s (not \"%s\")"
+msgstr "%s (nie \"%s\")"
+
+msgid "%s (%s as %s) in %s, %s - %s"
+msgstr "%s (%s jako %s) w %s, %s - %s"
+
+msgid "State"
+msgstr "Stan"
+
+msgid "Sum"
+msgstr "Suma"
+
+msgid "Sum:"
+msgstr "Suma:"
+
+msgid "Supporter"
+msgstr "Supporter"
+
+msgid "Supporters"
+msgstr "Supporterzy"
+
+msgid "Team %s"
+msgstr "Zespół %s"
+
+msgid "The administration has not configured any locations yet."
+msgstr "Administracja nie skonfigurowała jeszcze żadnych lokalizacji." 
+
+msgid "The administration has not configured any shifts yet."
+msgstr "Administracja nie skonfigurowała jeszcze żadnych zmian."
+
+msgid "The ending time has to be after the starting time."
+msgstr "Czas zakończenia musi być po czasie rozpoczęcia."
+
+msgid "The entries must match and must not be empty!"
+msgstr "Wpisy muszą być zgodne i nie mogą być puste!"
+
+msgid "The following angels are needed"
+msgstr "Potrzebni są następujący wolontariusze"
+
+msgid "There are 0 angels needed. Please enter the amounts of needed angels."
+msgstr "Nie potrzeba żadnych wolontariuszy. Proszę wprowadzić liczbę potrzebnych wolontariuszy."
+
+msgid "There are unanswered questions!"
+msgstr "Są nieodpowiedziane pytania!"
+
+msgid "There are unconfirmed angels in %d angel type. Angel type that needs approval:"
+msgstr "Są niepotwierdzeni wolontariusze w %d typie wolontariuszy. Typ wymagający zatwierdzenia:"
+
+msgid "The shifts end has to be after its start."
+msgstr "Koniec zmiany musi być po jej początku."
+
+msgid "This Angel has no valid T-shirt size, therefore it's not possible to hand out a T-shirt."
+msgstr "Ten wolontariusz nie ma ważnego rozmiaru koszulki, dlatego nie można mu jej wydać."
+
+msgid "This description is for single shifts, otherwise please use the description in shift type."
+msgstr "Ten opis dotyczy pojedynczych zmian, w przeciwnym razie użyj opisu w typie zmiany."
+
+msgid "This page is much more comfortable with javascript."
+msgstr "Ta strona jest znacznie wygodniejsza z JavaScript."
+
+msgid "This shift collides with one of your shifts."
+msgstr "Ta zmiana koliduje z jedną z Twoich zmian."
+
+msgid "This shift ended already."
+msgstr "Ta zmiana już się zakończyła."
+
+msgid "This shift is already occupied."
+msgstr "Ta zmiana jest już zajęta."
+
+msgid "This shift is in the far future. It becomes available for signup at %s."
+msgstr "Ta zmiana jest w odległej przyszłości. Zapisy będą możliwe od %s."
+
+msgid "This shift was imported from a schedule so some changes will be overwritten with the next import."
+msgstr "Ta zmiana została zaimportowana z harmonogramu, więc niektóre zmiany zostaną nadpisane przy następnym imporcie."
+
+msgid "This user does not exist."
+msgstr "Ten użytkownik nie istnieje."
+
+msgid "Time and location"
+msgstr "Czas i lokalizacja"
+
+msgid "Title:"
+msgstr "Tytuł:"
+
+msgid "Today"
+msgstr "Dziś"
+
+msgid "Tomorrow"
+msgstr "Jutro"
+
+msgid "Type:"
+msgstr "Typ:"
+
+msgid "Type and title"
+msgstr "Typ i tytuł"
+
+msgid "Unconfirmed"
+msgstr "Niepotwierdzony"
+
+msgid "User deleted."
+msgstr "Użytkownik usunięty."
+
+msgid "User groups saved."
+msgstr "Grupy użytkowników zapisane."
+
+msgid "User is not in angel type."
+msgstr "Użytkownik nie należy do typu wolontariusza."
+
+msgid "User not found."
+msgstr "Użytkownik nie znaleziony."
+
+msgid "User %s added to %s."
+msgstr "Użytkownik %s dodany do %s."
+
+msgid "User %s could not be notified by e-mail due to an error."
+msgstr "Nie można powiadomić użytkownika %s e-mailem z powodu błędu."
+
+msgid "User \"%s\" removed from \"%s\"."
+msgstr "Użytkownik \"%s\" usunięty z \"%s\"."
+
+msgid "Work log entry"
+msgstr "Wpis w dzienniku pracy"
+
+msgid "Yes"
+msgstr "Tak"
+
+msgid "Yesterday"
+msgstr "Wczoraj"
+
+msgid "You are already a %s."
+msgstr "Jesteś już %s."
+
+msgid "You are not allowed to confirm all users for this angel type."
+msgstr "Nie masz uprawnień do potwierdzenia wszystkich użytkowników dla tego typu wolontariusza."
+
+msgid "You are not allowed to confirm this users angel type."
+msgstr "Nie masz uprawnień do potwierdzenia typu wolontariusza tego użytkownika."
+
+msgid "You are not allowed to delete all users for this angel type."
+msgstr "Nie masz uprawnień do usunięcia wszystkich użytkowników dla tego typu wolontariusza."
+
+msgid "You are not allowed to delete this users angel type."
+msgstr "Nie masz uprawnień do usunięcia typu wolontariusza tego użytkownika."
+
+msgid "You are not allowed to sign up yet."
+msgstr "Nie możesz się jeszcze zapisać."
+
+msgid "You are not marked as arrived."
+msgstr "Nie jesteś oznaczony jako przybyły."
+
+msgid "You are signed up for this shift."
+msgstr "Jesteś zapisany na tę zmianę."
+
+msgid "You are subscribed. Thank you!"
+msgstr "Jesteś zapisany. Dziękujemy!"
+
+msgid "You cannot delete yourself."
+msgstr "Nie możesz usunąć samego siebie."
+
+msgid "You cannot edit angels with more rights."
+msgstr "Nie możesz edytować wolontariuszy o większych uprawnieniach."
+
+msgid "You cannot edit your own rights."
+msgstr "Nie możesz edytować własnych uprawnień."
+
+msgid "You have been assigned to a Shift:"
+msgstr "Zostałeś przydzielony do zmiany:"
+
+msgid "You have been removed from a Shift:"
+msgstr "Zostałeś usunięty ze zmiany:"
+
+msgid "You have done enough."
+msgstr "Wykonałeś wystarczająco dużo pracy."
+
+msgid "You joined %s."
+msgstr "Dołączyłeś do %s."
+
+msgid "You need be accepted member of the angel type."
+msgstr "Musisz być zaakceptowanym członkiem tego typu wolontariusza."
+
+msgid "Your account has been deleted."
+msgstr "Twoje konto zostało usunięte."
+
+msgid "Your password"
+msgstr "Twoje hasło"
+
+msgid "Your shift"
+msgstr "Twoja zmiana"
+
+msgid "You successfully left \"%2$s\"."
+msgstr "Pomyślnie opuściłeś \"%2$s\"."
+

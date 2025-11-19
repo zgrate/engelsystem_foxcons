@@ -346,3 +346,15 @@ msgstr "Event Ende muss nach dem Event Start liegen."
 
 msgid "validation.teardown_end.after"
 msgstr "Abbau Ende muss nach dem Event Ende liegen."
+
+msgid "auth.not_allowed_by_power"
+msgstr "Dein Konto ist nicht berechtigt, sich auf dieser Seite anzumelden. Wenn du denkst, das ist ein Fehler, kontaktiere bitte das Event-Team."
+
+msgid "registration.not_allowed_by_power"
+msgstr "Die Registrierung für dein Konto ist nicht erlaubt (fehlende Berechtigung). Wenn du das für einen Fehler hältst, kontaktiere bitte das Event-Team."
+
+msgid "login.foxcons.button"
+msgstr "Mit Foxcons anmelden"
+
+msgid "settings.profile.telegram"
+msgstr "Telegram"

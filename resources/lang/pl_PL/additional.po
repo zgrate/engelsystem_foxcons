@@ -1,0 +1,359 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Engelsystem 2.0\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language: pl_PL\n"
+
+msgid "auth.not-found"
+msgstr "Nie znaleziono użytkownika lub hasło jest nieprawidłowe. Proszę spróbować ponownie. Jeśli problem nadal występuje, zapytaj Niebo."
+
+msgid "validation.password.required"
+msgstr "Hasło jest wymagane."
+
+msgid "validation.password.length"
+msgstr "Wprowadzone hasło jest za krótkie."
+
+msgid "validation.login.required"
+msgstr "Nazwa użytkownika jest wymagana."
+
+msgid "validation.pronoun.required"
+msgstr "Proszę wprowadzić swój zaimek."
+
+msgid "validation.firstname.required"
+msgstr "Proszę wprowadzić imię."
+
+msgid "validation.lastname.required"
+msgstr "Proszę wprowadzić nazwisko."
+
+msgid "validation.mobile.required"
+msgstr "Proszę wprowadzić numer telefonu komórkowego."
+
+msgid "validation.dect.required"
+msgstr "Proszę wprowadzić numer DECT."
+
+msgid "validation.username.required"
+msgstr "Proszę wprowadzić swój nick."
+
+msgid "validation.username.username"
+msgstr ""
+"Proszę wprowadzić poprawny nick:
+"Użyj maksymalnie 24 liter, cyfr lub znaków łączących (.-_) do swojego nicka."
+
+msgid "validation.email.required"
+msgstr "Adres e-mail jest wymagany."
+
+msgid "validation.email.email"
+msgstr "Ten adres e-mail jest nieprawidłowy."
+
+msgid "validation.new_password.length"
+msgstr "Twoje nowe hasło jest za krótkie."
+
+msgid "validation.password.confirmed"
+msgstr "Twoje hasła nie są równe."
+
+msgid "validation.password_confirmation.required"
+msgstr "Musisz potwierdzić swoje hasło."
+
+msgid "validation.tshirt_size.required"
+msgstr "Proszę wybrać rozmiar koszulki."
+
+msgid "validation.tshirt_size.shirtSize"
+msgstr "Proszę wybrać poprawny rozmiar koszulki."
+
+msgid "validation.planned_arrival_date.required"
+msgstr "Proszę wprowadzić planowaną datę przybycia."
+
+msgid "validation.planned_arrival_date.min"
+msgstr "Planowana data przybycia nie może być wcześniejsza niż data rozpoczęcia przy przygotowaniach."
+
+msgid "validation.planned_arrival_date.between"
+msgstr "Planowana data przybycia musi być pomiędzy datą rozpoczęcia przygotowań a datą zakończenia rozbiórki."
+
+msgid "schedule.edit.success"
+msgstr "Harmonogram został pomyślnie skonfigurowany."
+
+msgid "schedule.import.request-error"
+msgstr "Nie można zażądać harmonogramu."
+
+msgid "schedule.import.read-error"
+msgstr "Nie można sparsować harmonogramu."
+
+msgid "schedule.import.success"
+msgstr "Import harmonogramu zakończony sukcesem."
+
+msgid "schedule.delete.success"
+msgstr "Usunięcie harmonogramu zakończone sukcesem."
+
+msgid "shifts.filter.toggle"
+msgstr "Zwiń/rozwiń filtry"
+
+msgid "validation.schedule-url.required"
+msgstr "URL harmonogramu jest wymagany."
+
+msgid "validation.schedule-url.url"
+msgstr "URL harmonogramu musi być typu URL."
+
+msgid "validation.shift-type.required"
+msgstr "Typ zmiany jest wymagany."
+
+msgid "validation.shift-type.int"
+msgstr "Typ zmiany musi być liczbą."
+
+msgid "validation.minutes-before.int"
+msgstr "Minuty przed rozmową muszą być liczbą całkowitą."
+
+msgid "validation.minutes-after.int"
+msgstr "Minuty po rozmowie muszą być liczbą całkowitą."
+
+msgid "news.comment.success"
+msgstr "Komentarz zapisany."
+
+msgid "news.comment-delete.success"
+msgstr "Komentarz pomyślnie usunięty."
+
+msgid "news.edit.duplicate"
+msgstr "Ta wiadomość została już utworzona."
+
+msgid "news.edit.success"
+msgstr "Wiadomość pomyślnie zaktualizowana."
+
+msgid "news.delete.success"
+msgstr "Wiadomość pomyślnie usunięta."
+
+msgid "oauth.invalid-state"
+msgstr "Nieprawidłowy stan OAuth"
+
+msgid "oauth.provider-error"
+msgstr "Błąd dostawcy OAuth"
+
+msgid "oauth.already-connected"
+msgstr "To konto jest już połączone z innym kontem!"
+
+msgid "oauth.connected"
+msgstr "Połączony dostawca logowania!"
+
+msgid "oauth.disconnected"
+msgstr "Odłączony dostawca logowania!"
+
+msgid "oauth.not-found"
+msgstr "Nie można znaleźć konta"
+
+msgid "oauth.provider-not-found"
+msgstr "Nie można znaleźć dostawcy OAuth"
+
+msgid "oauth.invalid_request"
+msgstr "Dostawca OAuth odrzucił żądanie z powodu brakującego lub nieprawidłowego parametru."
+
+msgid "oauth.unauthorized_client"
+msgstr "Nieautoryzowano jako klient z dostawcą OAuth."
+
+msgid "oauth.access_denied"
+msgstr "Właściciel zasobu lub serwer autoryzacji odrzucił żądanie."
+
+msgid "oauth.unsupported_response_type"
+msgstr "Dostawca OAuth nie obsługuje uzyskiwania kodu autoryzacji tą metodą."
+
+msgid "oauth.invalid_scope"
+msgstr "Żądany zakres jest nieprawidłowy, nieznany lub źle sformatowany."
+
+msgid "oauth.server_error"
+msgstr "Dostawca OAuth napotkał niespodziewany stan, który uniemożliwił zrealizowanie żądania."
+
+msgid "oauth.temporarily_unavailable"
+msgstr "Dostawca OAuth obecnie nie może zrealizować żądania "
+"z powodu tymczasowego przeciążenia lub konserwacji serwera."
+
+msgid "settings.profile.planned_arrival_date.invalid"
+msgstr "Proszę wprowadzić swoją planowaną datę przybycia. "
+"Powinna być po dacie rozpoczęcia przygotowań i przed datą zakończenia rozbiórki."
+
+msgid "settings.profile.planned_departure_date.invalid"
+msgstr "Proszę wprowadzić swoją planowaną datę wyjazdu. "
+"Powinna być po planowanej dacie przybycia, po dacie rozpoczęcia przygotowań, a przed datą zakończenia rozbiórki."
+
+msgid "settings.success"
+msgstr "Ustawienia zostały zapisane."
+
+msgid "settings.sessions.delete_success"
+msgstr "Sesja została pomyślnie usunięta."
+
+msgid "settings.api.key_reset_success"
+msgstr "Klucz API został pomyślnie zresetowany."
+
+msgid "faq.delete.success"
+msgstr "Element FAQ został pomyślnie usunięty."
+
+msgid "faq.edit.success"
+msgstr "Element FAQ został pomyślnie zaktualizowany."
+
+msgid "question.menu"
+msgstr "Zapytaj Niebo"
+
+msgid "question.delete.success"
+msgstr "Pytanie zostało pomyślnie usunięte."
+
+msgid "question.add.success"
+msgstr "Pytanie zostało pomyślnie dodane."
+
+msgid "question.edit.success"
+msgstr "Pytanie zostało pomyślnie zaktualizowane."
+
+msgid "tag.edit.duplicate"
+msgstr "Tag o tej nazwie już istnieje!"
+
+msgid "tag.edit.success"
+msgstr "Tag został pomyślnie zaktualizowany."
+
+msgid "tag.delete.success"
+msgstr "Tag został pomyślnie usunięty."
+
+msgid "notification.news.new"
+msgstr "Nowa wiadomość: %s"
+
+msgid "notification.news.new.introduction"
+msgstr "Dostępna jest nowa wiadomość: %1$s"
+
+msgid "notification.news.new.text"
+msgstr "Możesz ją zobaczyć na %3$s"
+
+msgid "notification.news.updated"
+msgstr "Zaktualizowana wiadomość: %s"
+
+msgid "notification.messages.new"
+msgstr "Nowa wiadomość prywatna od %s"
+
+msgid "notification.messages.new.text"
+msgstr "Masz nową wiadomość prywatną od \"%s\". Możesz ją zobaczyć na %s"
+
+msgid "notification.angeltype.confirmed"
+msgstr "Zostałeś potwierdzony jako %s"
+
+msgid "notification.angeltype.confirmed.introduction"
+msgstr "Zostałeś potwierdzony jako %1$s przez wspierającego."
+
+msgid "notification.angeltype.confirmed.text"
+msgstr "Możesz znaleźć opis na %2$s"
+
+msgid "notification.angeltype.added"
+msgstr "Zostałeś dodany jako %s"
+
+msgid "notification.angeltype.added.introduction"
+msgstr "Zostałeś dodany jako %1$s przez wspierającego."
+
+msgid "notification.angeltype.added.text"
+msgstr "Możesz znaleźć opis na %2$s"
+
+msgid "notification.shift.deleted"
+msgstr "Twoja zmiana została usunięta"
+
+msgid "notification.shift.deleted.introduction"
+msgstr "Zmiana, na którą jesteś zarejestrowany, została usunięta:"
+
+msgid "notification.shift.deleted.worklog"
+msgstr ""
+"Ponieważ usunięta zmiana była już przepracowana, "
+"dodaliśmy wpis w dzienniku pracy, aby utrzymać poprawne godziny pracy."
+
+msgid "notification.shift.updated"
+msgstr "Twoja zmiana została zaktualizowana"
+
+msgid "notification.shift.no_next_found"
+msgstr "Nie ma dostępnej zmiany."
+
+msgid "user.edit.success"
+msgstr "Użytkownik został pomyślnie edytowany."
+
+msgid "message.delete.success"
+msgstr "Wiadomość została pomyślnie usunięta."
+
+msgid "worklog.add.success"
+msgstr "Dziennik pracy został pomyślnie dodany."
+
+msgid "worklog.edit.success"
+msgstr "Dziennik pracy został pomyślnie zaktualizowany."
+
+msgid "worklog.delete.success"
+msgstr "Dziennik pracy został pomyślnie usunięty."
+
+msgid "voucher.save.success"
+msgstr "Liczba voucherów została zapisana."
+
+msgid "location.edit.success"
+msgstr "Lokalizacja została pomyślnie edytowana."
+
+msgid "location.delete.success"
+msgstr "Lokalizacja została pomyślnie usunięta."
+
+msgid "shifttype.edit.success"
+msgstr "Typ zmiany został pomyślnie edytowany."
+
+msgid "shifttype.delete.success"
+msgstr "Typ zmiany został pomyślnie usunięty."
+
+msgid "validation.name.exists"
+msgstr "Nazwa jest już używana."
+
+msgid "registration.disabled"
+msgstr "Rejestracja jest wyłączona."
+
+msgid "registration.successful.supporter"
+msgstr "Rejestracja zakończona sukcesem."
+
+msgid "registration.successful"
+msgstr "Rejestracja zakończona sukcesem. Możesz teraz się zalogować!"
+
+msgid "shifts.history.delete.success"
+msgstr "Zmiany zostały pomyślnie usunięte."
+
+msgid "config.event"
+msgstr "Wydarzenie"
+
+msgid "config.name"
+msgstr "Nazwa wydarzenia"
+
+msgid "config.name.info"
+msgstr "Nazwa wydarzenia jest wyświetlana na stronie startowej."
+
+msgid "config.welcome_msg"
+msgstr "Wiadomość powitalna wydarzenia"
+
+msgid "config.welcome_msg.info"
+msgstr "Wiadomość powitalna jest wyświetlana po pomyślnej rejestracji. Możesz używać markdown."
+
+msgid "config.buildup_start"
+msgstr "Data rozpoczęcia przygotowań"
+
+msgid "config.event_start"
+msgstr "Data rozpoczęcia wydarzenia"
+
+msgid "config.event_end"
+msgstr "Data zakończenia wydarzenia"
+
+msgid "config.teardown_end"
+msgstr "Data zakończenia rozbiórki"
+
+msgid "validation.event_start.after"
+msgstr "Rozpoczęcie wydarzenia musi być po przygotowaniach."
+
+msgid "validation.event_end.after"
+msgstr "Zakończenie wydarzenia musi być po jego rozpoczęciu."
+
+msgid "validation.teardown_end.after"
+msgstr "Zakończenie rozbiórki musi być po zakończeniu wydarzenia."
+
+msgid "auth.not_allowed_by_power"
+msgstr "Twoje konto nie jest uprawnione do logowania na tej stronie. Jeśli uważasz, że to błąd, skontaktuj się z organizatorami wydarzenia."
+
+msgid "registration.not_allowed_by_power"
+msgstr "Rejestracja nie jest dozwolona dla Twojego konta (niewystarczające uprawnienia). Jeśli uważasz, że to błąd, skontaktuj się z organizatorami wydarzenia."
+
+msgid "oauth.login-foxcons"
+msgstr "Zaloguj się przez Foxcons"
+
+msgid "settings.profile.telegram"
+msgstr "Telegram"

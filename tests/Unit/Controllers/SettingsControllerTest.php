@@ -1120,6 +1120,7 @@ class SettingsControllerTest extends ControllerTest
             'tshirt_size' => true,
             'mobile'      => false,
             'dect'        => false,
+            'telegram'     => false,
         ];
         $this->config = new Config([
             'password_min_length' => 6,
