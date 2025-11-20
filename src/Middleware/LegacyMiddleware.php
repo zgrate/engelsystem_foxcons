@@ -132,7 +132,7 @@ class LegacyMiddleware implements MiddlewareInterface
                 return [$title, $content];
         }
 
-        throw_redirect(url('/login'));
+        throw_redirect(url('/login/foxcons'));
 
         return [];
     }

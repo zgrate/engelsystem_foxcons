@@ -294,7 +294,7 @@ class OAuthController extends BaseController
         // Set a user-visible notification and redirect to login instead of throwing a 404
         $this->addNotification('oauth.provider-error', NotificationType::ERROR);
 
-        return $this->redirect->to('/login');
+        return $this->redirect->to('/login/foxcons');
     }
 
     protected function redirectRegister(
