@@ -17,6 +17,6 @@ class HomeController extends BaseController
 
     public function index(): Response
     {
-        return $this->redirect->to($this->auth->user() ? $this->config->get('home_site') : 'login_foxcons');
+        return $this->redirect->to($this->auth->user() ? $this->config->get('home_site') : 'login/foxcons');
     }
 }
