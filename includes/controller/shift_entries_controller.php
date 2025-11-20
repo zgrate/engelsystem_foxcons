@@ -18,7 +18,7 @@ function shift_entries_controller(): array
 {
     $user = auth()->user();
     if (!$user) {
-        throw_redirect(url('/login'));
+        throw_redirect(url('/login/foxcons'));
     }
 
     $action = strip_request_item('action');
