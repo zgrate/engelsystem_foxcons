@@ -1610,7 +1610,7 @@ msgid "Number of shifts: %s"
 msgstr "Liczba zmian: %s"
 
 msgid "Occupancy"
-msgstr "Zajętość"
+msgstr "Obłożenie"
 
 msgid "occupied"
 msgstr "zajęte"
