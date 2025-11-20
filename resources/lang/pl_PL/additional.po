@@ -10,7 +10,7 @@ msgstr ""
 "Language: pl_PL\n"
 
 msgid "auth.not-found"
-msgstr "Nie znaleziono użytkownika lub hasło jest nieprawidłowe. Proszę spróbować ponownie. Jeśli problem nadal występuje, zapytaj Niebo."
+msgstr "Nie znaleziono użytkownika lub hasło jest nieprawidłowe. Proszę spróbować ponownie. Jeśli problem nadal występuje, zapytaj organizatora."
 
 msgid "validation.password.required"
 msgstr "Hasło jest wymagane."
@@ -192,7 +192,7 @@ msgid "faq.edit.success"
 msgstr "Element FAQ został pomyślnie zaktualizowany."
 
 msgid "question.menu"
-msgstr "Zapytaj Niebo"
+msgstr "Zapytaj Organizatora"
 
 msgid "question.delete.success"
 msgstr "Pytanie zostało pomyślnie usunięte."

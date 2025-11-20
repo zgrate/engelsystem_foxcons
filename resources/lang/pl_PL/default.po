@@ -2014,3 +2014,13 @@ msgstr "Twoja zmiana"
 msgid "You successfully left \"%2$s\"."
 msgstr "Pomyślnie opuściłeś \"%2$s\"."
 
+msgid "Please enter your planned date of departure on your settings page to give us a feeling for teardown capacities."
+msgstr "Wprowadź datę twojego wyjazdu w ustawieniach, abyśmy wiedzieli, jak bardzo będziemy umierać na rozkładaniu konwentu"
+
+msgid "Other angel type needed / collides with my shifts"
+msgstr "Potrzeba innego typu pomocy / koliduje z twoją zmianą"
+
+msgid "%d helper needed"
+msgid_plural "%d helpers needed"
+msgstr[0] "%d osoba potrzebna"
+msgstr[1] "%d osób potrzebnych"

@@ -47,6 +47,11 @@ class AuthController extends BaseController
         return $this->response->withView('pages/login');
     }
 
+    protected function showFoxconsLogin(): Response
+    {
+        return $this->response->withView('pages/login_foxcons');
+    }
+
     /**
      * Posted login form
      */
@@ -85,20 +90,20 @@ class AuthController extends BaseController
     $tokens = $foxcons->login($login, $password);
         if (empty($tokens) || empty($tokens['token'])) {
             $this->addNotification('auth.not-found', NotificationType::ERROR);
-            return $this->showLogin();
+            return $this->showFoxconsLogin();
         }
 
         $profile = $foxcons->profile((string) $tokens['token']);
         if (empty($profile) || empty($profile['id'])) {
             $this->addNotification('auth.not-found', NotificationType::ERROR);
-            return $this->showLogin();
+            return $this->showFoxconsLogin();
         }
 
         $profilePower = $profile['power'] ?? null;
         if ($profilePower !== null) {
             if (!$this->isPowerAllowed((string) $profilePower)) {
                 $this->addNotification('auth.not_allowed_by_power', NotificationType::ERROR);
-                return $this->showLogin();
+                return $this->showFoxconsLogin();
             }
         }
         // Try to find an existing OAuth link
